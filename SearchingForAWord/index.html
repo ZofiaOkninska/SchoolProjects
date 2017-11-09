@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lekcja 2 - zad.3</title>
+</head>
+<body>
+  <p id="result"></p>
+  <script>
+  var sent = window.prompt("Insert any sentence: ", "ten testowy tekst te słowa testowe testuje: te, ten, Bartek, potencjał, plater. Te.");
+  var pattern = window.prompt("What are you searching for in this sentence: ");
+  var sentSplit, word, iedWord;
+
+  pattern = pattern.toLowerCase();
+  sentSplit = sent.split(" ");
+
+  function endsWithSign (str) {
+    var signs = ";,.:";
+    for (var j = 0; j < signs.length; j++) {
+      if (str.endsWith(signs[j])) return true;
+    }
+    return false;
+  }
+
+  function writeUnderlined (str) {
+    document.getElementById("result").innerHTML += "<u>" + str + "</u>";
+  }
+
+  function write (str) {
+    document.getElementById("result").innerHTML += str + " ";
+  }
+
+  for (var i = 0; i < sentSplit.length; i++) {
+    word = sentSplit[i];
+    iedWord = word.toLowerCase();
+    if (endsWithSign(iedWord) && iedWord.slice(0,-1) === pattern) {  //podkreślanie gdy jest "sign"
+      writeUnderlined(word.slice(0,-1));
+      write(word.slice(-1)); //space
+      continue;
+    }
+    if (iedWord === pattern) {  //podkreślanie gdy nie ma "sign"
+      writeUnderlined(word);
+      write("");  //space
+      continue;
+    }
+    write(word); //niepodkreślone słowo + space
+  }
+  </script>
+</body>
+</html>
