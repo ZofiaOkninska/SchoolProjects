@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bubbles</title>
+  <style>
+    * {
+      margin: 0 auto;
+    }
+
+    #board {
+      margin-top: 50px;
+      width: 468px;
+    }
+
+    .cell {
+      width: 50px;
+      height: 50px;
+      border: 1px solid white;
+      border-radius: 6px;
+      background-color: lightgray;
+      display: inline-block;
+      margin-bottom: -3px;
+    }
+
+    .bubble {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="board"></div>
+  <script>
+    //cell template
+    function Cell() {
+      this.isEmpty = true;
+      this.bubble = null;
+
+      //create cell-div method
+      createDiv = function() {
+        var divCell = document.createElement("div");
+        divCell.addEventListener("click", function() {
+          console.log("clicked");
+        });
+        divCell.classList.add("cell");
+        document.getElementById("board").appendChild(divCell);
+      };
+
+      createDiv();
+    }
+
+    //board creator
+    function Board(cellCount) {
+      function createObjectsArray(objectName, count) {
+        var array = [];
+        for (var i = 0; i < count; i++) {
+          array.push(new objectName());
+          //array[i].innerText = i; nie wpisuje się
+        }
+        return array;
+      }
+
+      this.cells = createObjectsArray(Cell, cellCount);
+    }
+
+    //bubble template
+    function Bubble() {
+      var colors = ["#AA3939", "#882D60", "#AA6C39", "#277552", "#2C4770", "#AA6439", "#86AF34"];
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.position = null;
+      this.isSelected = false;
+
+      //create bubble-div method
+      createDiv = function() {
+        var divBubble = document.createElement("div");
+        divBubble.addEventListener("click", function() {
+          console.log("clickedbubble!!!");
+        });
+        divBubble.classList.add("bubble");
+        document.getElementById("board").appendChild(divBubble);
+      };
+
+      // this.show = function(){
+      //   this.isVisible = true;
+      //   this.img.setAttribute("src", internalImgSource);
+      // }
+      //
+      // this.hide = function() {
+      //   this.isVisible = false;
+      //   this.img.setAttribute("src", defaultImgSource);
+      // }
+    }
+
+    //############################
+
+    function init() {
+      var board = new Board(81);
+      console.log(board)
+    }
+    init();
+  </script>
+</body>
+
+</html>
