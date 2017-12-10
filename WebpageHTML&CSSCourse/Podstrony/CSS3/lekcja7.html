@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 7 - Pozycjonowanie na stronie</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Czym jest pozycjonowanie?</h2>
+                        
+                        <p>Pozycjonowanie polega na odpowiednim manewrowaniu elementami na stronie względem jakiegoś określonego obszaru. Do tego celu służy nam specjalna własność <b>position:</b>, która może przyjmować takie wartości jak:</p>
+                        <ul>
+                            <li><b>static</b> - statyczne</li>
+                            <li><b>relaive</b> - względne</li>
+                            <li><b>absolute</b> - bezwzględne</li>
+                            <li><b>fixed</b> - stałe</li>
+                            <li><b>kontekstowe</b> - połączenie pozycjonowania względnego i bezwzględnego</li>
+                        </ul>
+                        <p>Pamietajmy, że gdy kożystamy z pozycjonowania, nie możemy używać waściwośći <b>float</b> dla danego elementu!</p>
+                     </div>
+                    
+                    <section>
+                        <h4>Pozycjonowanie statyczne STATIC</h4>
+                        
+                        <ul>
+                            <li>Jest to <b>domyslna wartość</b> dla każdego elementu na stronie.</li>
+                            <li>Używając tego typu pozycjonowania nie jesteśmy wstananie przesuwać elementu w różnych kierunkach za pomocą wartości: left, right, top, bottom.</li>
+                            <li>Element taki znajdując się w okeślonym kontenerze przyjmuje swoje <b>widht</b> od niego. Jeśli nie znajduje się w żadnym elemencie nadrzędnym, przyjmuje taką szerokość jaka jest na nim ustawiona.</li>
+                            <li><b>Height</b> elementu o pozycjonowaniu statycznym jest dostosowywane na podstawie jego zawartości</li>
+                        </ul>
+                    </section>
+                       
+                    <section>
+                        <h4>Pozycjonowanie względne RELATIVE</h4>
+                        
+                        <ul>
+                            <li>Przejmuje wszytkie cechy pozycjonowania statycznego, zmienione o kilka elementów:</li>
+                            <li>Można go przesuwać w różnych kierunkach za pomocą wartości: left, right, top, bottom. Przesunięcie to jest obliczane względem lewego górnego rogu położenia początkowego pojemnika.</li>
+                            <li>Element taki znajdując się w okeślonym kontenerze przyjmuje swoje <b>widht</b> od pojemnika nadrzędnego. Jeśli nie znajduje się w żadnym elemencie nadrzędnym, przyjmuje taką szerokość jaka jest na nim ustawiona.</li>
+                            <li><b>Height</b> elementu o pozycjonowaniu statycznym jest dostosowywana na podstawie jego zawartości</li>
+                        </ul>
+                    </section>
+                       
+                    <section>
+                        <h4>Pozycjonowanie bezwzględne ABSOLUTE</h4>
+                        
+                        <ul>
+                            <li>Domyślnie taki element jest pozycjonowany <b>względem strony internetowej</b> lub elementu nadrzędnego (<b>Pozycjonowanie kotekstowe</b> o ile na elemencie zwenętrznym jest ustawione <b>position:absolute</b>).</li>
+                            <li>Używając tego typu pozycjonowania możemy przesuwać elementy w różnych kierunkach za pomocą wartości: left, right, top, bottom. Jednocześnie ustawiając wartości ujemne dla któregoś z kierunków możemy przesunąć obiekt poza obręb w kótym się znajduje (strona lub element nadrzędny).</li>
+                            <li>Jeśli używamy pozycjonowania kontekstowego elementy są pozycjonowane względem elementu nadrzędnego.</li>
+                        </ul>
+                    </section>
+                       
+                    <section>
+                        <h4>Pozycjonowanie stałe FIXED</h4>
+                        
+                        <ul>
+                            <li>Element jest pozycjonowany <b>względem okna przeglądarki</b> i zawsze pozostaje w tym samym miejscu niezależnie od srollowania.</li>
+                            <li>Używajamy tu przesuwania w różnych kierunkach za pomocą wartości: left, right, top, bottom względem okne przeglądarki.</li>
+                            <li>Element nie wpływa zupełnie na inne elementy na stronie.</li>
+                        </ul>
+                    </section>   
+                </article>
+            </div>
+
+             <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

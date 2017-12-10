@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Memory</title>
+  <style>
+    * {
+      margin: 0 auto;
+      font-family: "Courier New";
+    }
+
+    #board {
+      width: 500px;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    #timer,
+    #currentTimer {
+      height: 25px;
+      border-radius: 15px;
+    }
+
+    #timer {
+      margin-bottom: 30px;
+      width: 490px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    #timerText {
+      top: 4px;
+      left: 208px;
+      position: absolute;
+    }
+
+    #currentTimer {
+      width: 490px;
+      margin-left: 0px;
+      top: 0px;
+      z-index: -1;
+      position: absolute;
+    }
+
+    #endGameDiv {
+      width: 300px;
+      height: 170px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 1px;
+      padding: 20px;
+      text-align: center;
+      top: 100px;
+      left: 79px;
+      position: absolute;
+    }
+
+    #buttonOk {
+      padding: 3px;
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      top: 110px;
+      left: 120px;
+      background-color: white;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="gameTitle"></h1>
+  <div id="board">
+  </div>
+  <map name="timeChoice">
+    <area shape="poly" coords="52,49,86,193,426,79" alt="30s_game" title="Play in 30s mode!" href="#" onclick="onClickSetBoardByChoosenTime(30);return false;">
+    <area shape="poly" coords="99,277,428,136,462,298" alt="60s_game" title="Play in 60s mode!" href="#" onclick="onClickSetBoardByChoosenTime(60);return false;">
+    <area shape="poly" coords="117,337,470,374,143,482" alt="90s_game" title="Play in 90s mode!" href="#" onclick="onClickSetBoardByChoosenTime(90);return false;">
+  </map>
+  <script>
+    //sets variables and shows select-time-menu on beggining
+    function init() {
+      cardsImagesSources = ["img/1.jpg", "img/1.jpg", "img/2.jpg", "img/2.jpg", "img/3.jpg", "img/3.jpg", "img/4.jpg", "img/4.jpg",
+        "img/5.jpg", "img/5.jpg", "img/6.jpg", "img/6.jpg", "img/7.jpg", "img/7.jpg", "img/8.jpg", "img/8.jpg"
+      ];
+      initImages = [];
+      shownCardsSources = [];
+      shownCardsIndexes = [];
+      matchedCards = [];
+      isTimingSetted = false;
+      gameTime = 0;
+      currentTimerWidth = 490;
+
+      newImg = document.createElement("img");
+      endGameDiv = document.createElement("div");
+      timer = document.createElement("div");
+      timerText = document.createElement("div");
+      currentTimer = document.createElement("div");
+      button = document.createElement("button");
+
+      timer.setAttribute("id", "timer");
+      timerText.setAttribute("id", "timerText");
+      currentTimer.setAttribute("id", "currentTimer");
+      endGameDiv.setAttribute("id", "endGameDiv");
+      button.setAttribute("id", "buttonOk");
+
+      board = document.getElementById("board");
+      document.getElementById("gameTitle").innerHTML = "Memory game";
+
+      showSelectTimeMenu();
+    }
+
+    //shows select-time-menu on beggining
+    function showSelectTimeMenu() {
+      board.innerHTML = "";
+      newImg.src = "img/menu.png";
+      newImg.useMap = "#timeChoice";
+      board.appendChild(newImg);
+    }
+
+    //sets board when cliked choosen time on select-time-menu
+    function onClickSetBoardByChoosenTime(time) {
+      setInitImages();
+      shuffleArray(cardsImagesSources);
+      adjustBoardAccordingTime(time);
+      enableClickAllCards();
+    }
+
+    //sets first shown game cards
+    function setInitImages() {
+      board.innerHTML = "";
+      newImg.src = "img/0.jpg";
+      newImg.removeAttribute("useMap");
+      newImg.style.width = "125px";
+      newImg.style.marginTop = "-4px";
+      for (var i = 0; i < cardsImagesSources.length; i++) {
+        board.appendChild(newImg.cloneNode(true));
+      }
+      initImages = document.getElementsByTagName("img");
+      console.log(initImages)
+    }
+
+    //shuffles the array of images with drawing
+    function shuffleArray(array) {
+      if (0 !== array.length) {
+        for (var i = array.length - 1; i >= 1; i--) {
+          var randomIndex = Math.floor(Math.random() * (i + 1)) //0-ostatniego
+          //console.log(randomIndex)
+          var temp = array[randomIndex];
+          array[randomIndex] = array[i];
+          array[i] = temp;
+          //console.log(array)
+        }
+        console.log(array)
+      }
+    }
+
+    //adjusts the layout according to choosen time
+    function adjustBoardAccordingTime(time) {
+      document.getElementById("gameTitle").innerHTML += " " + time + " [s]";
+
+      timerText.innerHTML = "<p>00:00:00</p>";
+      timer.appendChild(timerText);
+
+      currentTimer.style.backgroundColor = "#00cc44";
+      currentTimer.style.width = currentTimerWidth;
+      timer.appendChild(currentTimer);
+
+      document.body.insertBefore(timer, board);
+      gameTime = time;
+    }
+
+    //adds click functionality to all cards
+    function enableClickAllCards() {
+      for (var i = 0; i < initImages.length; i++) enableClickCard(i);
+    }
+
+    //adds click functionality to a card
+    function enableClickCard(index) {
+      initImages[index].onclick = function() {
+        adjustClickedPairCards(index);
+      };
+    }
+
+    //adjusts when to show/hide card and pair-check for clicked cards
+    function adjustClickedPairCards(i) {
+      if (shownCardsSources.length < 2) {
+        setTimingOnce();
+        showCard(i);
+      }
+
+      if (shownCardsSources.length == 2) {
+        disableClickAllCards();
+        checkChoice();
+      }
+    }
+
+    //starts counting time on first click and runs timer-div
+    function setTimingOnce() {
+      if (!isTimingSetted) {
+        isTimingSetted = true;
+
+        setGameTimeout();
+        setCurrentTimerInterval();
+        setTimerInnerText();
+      }
+    }
+
+    //does when gameTime has ended
+    function setGameTimeout() {
+      startCountingGameTime = setTimeout(function() {
+        disableClickAllCards();
+        showEndOfGameDiv("Ups, your time has ended :(\nClick Okey to play again!");
+      }, (gameTime * 1000));
+    }
+
+    //changes currentTimerWidth in interval (with changing color at 20% time)
+    function setCurrentTimerInterval() {
+      var refreshPeriod = 10;
+      var substractingWidth = currentTimerWidth / ((gameTime * 1000) / refreshPeriod);
+      isTimeToChangeColor();
+
+      currentTimerInterval = setInterval(function() {
+        currentTimerWidth -= substractingWidth;
+        currentTimer.style.width = currentTimerWidth + "px";
+      }, refreshPeriod);
+    }
+
+    //set Timeout to change currentTimer color in 20% of gameTime
+    function isTimeToChangeColor() {
+      isTimeToChangeCurrentTimerColor = setTimeout(function() {
+        currentTimer.style.backgroundColor = "#d6d6c2";
+      }, (gameTime * 1000 * 0.8));
+    }
+
+    function setTimerInnerText() {
+      var startTime = new Date(); //start time date
+      var endTime = new Date(startTime.getTime() + 1000 * gameTime); //end time date
+
+      setInnerText = setInterval(function() {
+        var currentTime = new Date(); //current time date
+        var differenceInTime = endTime - currentTime;
+        var countingTime =  new Date();
+        countingTime.setTime(differenceInTime)
+        setCurrentTimeText(currentTime, endTime, countingTime);
+      }, 1);
+    }
+
+    function setCurrentTimeText(currentTime, endTime, countingTime) {
+      if (currentTime <= endTime) {
+        // var minutes = Math.round((difference % (1000 * 60 * 60)) / (1000 * 60));
+        // var seconds = Math.round((difference % (1000 * 60)) / 1000);
+        // var miliseconds = Math.round(difference % 1000);
+
+        // var minutes = Math.round((difference / (1000 * 60)) % (1000 * 60));
+        // var seconds = Math.round((difference / 1000) % 60);
+        // var miliseconds = Math.round(difference % 1000);
+
+        var minutes = countingTime.getMinutes();
+        var seconds = countingTime.getSeconds();
+        var miliseconds = countingTime.getMilliseconds();
+
+        setTimeInTimer(minutes, seconds, miliseconds);
+      }
+    }
+
+    function setTimeInTimer(minutes, seconds, miliseconds) {
+      var minutes = addLeadingZero(minutes, 2);
+      var seconds = addLeadingZero(seconds, 2);
+      var miliseconds = addLeadingZero(miliseconds, 3);
+
+      timerText.innerHTML = "<p>" + minutes + ":" + seconds + ":" + miliseconds + "</p>";
+    }
+
+    function addLeadingZero(time, neededLength) {
+      while (time.toString().length < neededLength) time = "0" + time;
+      return time;
+    }
+
+    //overwrites click functionality to all cards
+    function disableClickAllCards() {
+      for (var i = 0; i < initImages.length; i++) disableClickCard(i);
+    }
+
+    //overwrites click functionality to a card
+    function disableClickCard(index) {
+      initImages[index].onclick = function() {
+        return false;
+      }
+    }
+
+    function showEndOfGameDiv(text) {
+      clearTimeout(startCountingGameTime);
+      clearTimeout(isTimeToChangeCurrentTimerColor);
+      clearInterval(currentTimerInterval);
+      clearInterval(setInnerText);
+
+      endGameDiv.innerHTML = "<b>" + text + "</b>";
+      initializeButton();
+      board.appendChild(endGameDiv).appendChild(button);
+      setButtonOnclick();
+    }
+
+    function initializeButton() {
+      button.value = "OK";
+      button.type = "button";
+      button.innerHTML = "Okey";
+    }
+
+    //adds onclick functionality to button
+    function setButtonOnclick() {
+      document.getElementById("buttonOk").onclick = function() {
+        reloadGame()
+      };
+    }
+
+    //reloads whole game
+    function reloadGame() {
+      document.body.removeChild(timer);
+      board.innerHTML = "";
+      init();
+    }
+
+    //shows clicked card
+    function showCard(x) {
+      initImages[x].setAttribute("src", cardsImagesSources[x]);
+      shownCardsSources.push(cardsImagesSources[x]);
+      shownCardsIndexes.push(x);
+      disableClickCard(x);
+    }
+
+    //checks wether shown pair is equal
+    function checkChoice() {
+      if (shownCardsSources[0] !== shownCardsSources[1]) {
+        setTimeout(function() {
+          hideCard(shownCardsIndexes[0]);
+          hideCard(shownCardsIndexes[1]);
+          clearVariablesAfterPairCheck();
+        }, 1200);
+      } else {
+        matchedCards.push(shownCardsIndexes[0]);
+        matchedCards.push(shownCardsIndexes[1]);
+        clearVariablesAfterPairCheck();
+
+        //timeout because seen result is too fast
+        setTimeout(function() {
+          if (matchedCards.length == 16) {
+            disableClickAllCards();
+            showEndOfGameDiv("Yey, you won! Play again!");
+          }
+        }, 100);
+      }
+    }
+
+    //hides shown cards
+    function hideCard(x) {
+      initImages[x].setAttribute("src", "img/0.jpg");
+    }
+
+    //clears used variables (to check pair of cards) and resets onclick functionalities
+    function clearVariablesAfterPairCheck() {
+      enableClickAllCards();
+      disableClickMatchedCards();
+      shownCardsSources = [];
+      shownCardsIndexes = [];
+    }
+
+    //overwrites click functionality to matched cards
+    function disableClickMatchedCards() {
+      for (var i = 0; i < matchedCards.length; i++) {
+        disableClickCard(matchedCards[i]);
+      }
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

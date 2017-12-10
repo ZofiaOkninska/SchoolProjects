@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 6 - Grafika na stronie</h1>
+                <article>
+                    <div class="intro">
+                        <h2>Wstawianie obrazków na stronie</h2>
+                        
+                        <img src="../../Obrazy/HTML/6/1.png" alt="img_1"/>
+                        <p>Obrazek umieścimy na naszej witrynie poprzez znacznik pojedynczy <b>&lt;img ... &#8725;&gt;</b>. Wewnątrz niego będziemy musieli umieścić atrybuty odpowiedzialne za chociażby źródło z którego dana grafika pochodzi. Sprawdźmy więc po po kolei co będzie nam do tego potrzebne.</p>
+                     </div>
+                    
+                    <section>
+                        <h4>Znacznik &lt;img ... &#8725;&gt;</h4>
+                        
+                        <p>Obrazki to <b>elementy liniowe</b>, to znaczy że umieszczone jeden po drugim wyświetlą się w jednej linii (o ile szerokośc strony im na to pozwoli).</p>
+                        <p>Aby zuyskać taki sam efekt jak na obrazku wyżej napiszemy:</p>
+                        <img src="../../Obrazy/HTML/6/2.png" alt="img_2"/>
+                    </section>
+                        
+                    <section> 
+                        <p class="acapit">src=" ... "</p>
+                           
+                        <p>Atrybut <b>src=" ... "</b> służy - jak już jego nazwa sama wskazuje - do umieszczania źródła pochodzenia danego obrazka. Jest zatem najważniejszym, niezbędnym elementem całego znacznika &lt;img ... &#8725;&gt;, gdyż bez niego przeglądarka nie będzie mogła odnaleźć grafiki do wyświetlenia. Adresując obrazek możemy kożystać z tzw. <b>adresowania względnego</b> lub <b>bezwzględnego</b>, lecz ten temat dokładniej omówimy w następnej lekcji.</p>
+                        <br/><p>Na razie przyjżyjmy się jak wygląda zaadresowany obrazek o nazwie "zegar.gif" znajdujący się w tym samym katalogu co strona html.</p>
+                        <img src="../../Obrazy/HTML/6/3.png" alt="src"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">alt=" ... "</p>
+                           
+                        <p>Skoro mamy opisaną już ściężkę dostępu do gafiki, należało by teraz zastanowić się, co w przypadku gdy usuniemy dany obrazek ze źródła lub po prostu go nie dodamy (ewentualnie będzie błędny). Otóż w takich przypadkach jak te, zostanie wyświetlony dodatkowy tekst umieszczony w powyższym atrybucie. Zobaczmy działanie w praktyce:</p>
+                        <img src="../../Obrazy/HTML/6/4.png" alt="alt_1"/>
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <p class="center">Podanie ścieżki i tekstu alternatywnego:</p>
+                            <img src="../../Obrazy/HTML/6/4.png" alt="alt_1"/>
+                        </div>
+
+                        <div class="second">
+                            <p class="center">Niewyświetlony obrazek:</p>
+                            <img src="../../Obrazy/HTML/6/3,2.png" alt="alt_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section> 
+                        <p class="acapit">title=" ... "</p>
+                           
+                        <p>Atrybut <b>title=" ... "</b> służy do wyświetlenia dodatkowego opisu obrazka (może to być cokolwiek), po najechaniu na niego myszą. Przypatrzmy się działaniu z pooprzedniego przykładu:</p>
+                        <img src="../../Obrazy/HTML/6/5.png" alt="title_1"/>
+                        <img src="../../Obrazy/HTML/6/6.png" alt="title_2"/>
+                    </section>
+                    
+                    <section>
+                        <h4>Dodatki do znacznika &lt;img ... &#8725;&gt;</h4>
+                        
+                        <p>Dodatkowo możemy określić również jako artybuty takie parametry obrazka jak jego wysokość czy szerokość. Służy do tego <b>width</b> oraz <b>height</b>. Wartośći podajemy w pikselach.</p>
+                        <img src="../../Obrazy/HTML/6/7.png" alt="img_2"/>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

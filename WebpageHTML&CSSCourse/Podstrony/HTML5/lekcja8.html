@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 8 - Tabele</h1>
+                <article>
+                    <div class="intro">
+                        <p>W tej lekcji nauczymy się tworzyć różne struktury tabel. Mogą być one bardziej lub mniej skomplikowane, wsztstko zależy od jej ostateczniego wykończenia w postaci np scalonych komórek, czy wewnętrznych dodatkowych tabel.</p> 
+                        <p>Należy zwrócić uwagę przy tworzeniu na ilość wierszy oraz komórek w każdym z nich. Oto wygląd przykładowej tabeli:</p>
+                        
+                        <table border="1" class="table_with_margin_top">
+                            <tr>
+                                <th>To jest komórka 1 tytułowa w wierszu 1</th>
+                                <th>To jest komórka 2 tytułowa w wierszu 1</th>
+                            </tr>
+                            
+                            <tr>
+                                <td>To jest komórka 1 w wierszu 2</td>
+                                <td>To jest komórka 2 w wierszu 2</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>To jest komórka 1 w wierszu 3</td>
+                                <td>To jest komórka 2 w wierszu 3</td>
+                            </tr>
+                        </table>
+                     </div>
+                    
+                    <section>
+                        <h4>Tworzymy tablę - &lt;table&gt;&lt;&#8725;table&gt;</h4>
+                        
+                        <p>Znacznik &lt;table&gt;&lt;&#8725;table&gt; wyznacza ramy każdej tabeli. W nim znajda się sobno <b>wiersze</b> oraz znajdujące się w nich <b>komórki</b>.</p>
+                        <img src="../../Obrazy/HTML/8/1.png" alt="table"/>
+                        <p>Utworzona w ten sposób tabela jesznie nie będzie posiadała żadnych obramowań, więc należy je dodać za pomocą atrybutu <b>border="..."</b>, gdzie pomiędzy cudzysłowia wstawiamy liczbową warość określającą grubość obramowań.</p>
+                    </section>
+                        
+                    <section>    
+                        <h4>Wiersze i komórki, czyli &lt;tr&gt;&lt;&#8725;tr&gt; oraz &lt;td&gt;&lt;&#8725;td&gt; &#8725; &lt;th&gt;&lt;&#8725;th&gt;</h4>
+
+                        <p>Aby utworzyć wiersze w naszej tabeli potrzebujemy zancznika <b>&lt;tr&gt;&lt;&#8725;tr&gt;</b>. Każdy taki osobny element oznacza kolejny wiersz.</p>
+                        <p>Chcąc stworzyć komórkę, należy w każdym z wierszy wstawić odpowiednie znaczniki w zależność od tego jaki typ komórki potrzebujemy. I tak znacznik <b>&lt;td&gt;&lt;&#8725;td&gt;</b> oznacza zwykłą komórkę, natomiast <b>&lt;th&gt;&lt;&#8725;th&gt;</b> umieszczamy w miejscu, gdzie potrzebujemy komórek tytyułowych.</p>
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <p>Oto nasza utworzona tabela:</p>
+                            <img src="../../Obrazy/HTML/8/2.png" alt="table_2"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/HTML/8/3.png" alt="table_3"/>
+                        </div>
+                        
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>    
+                        <h4>Dowatkowe elemnety tabel</h4>
+
+                        <p> To jak należy posługiwać się językiem HTML okresla jego <b>specyfikacja</b>. World Wide Web Consortium, w skrócie <mark>W3C</mark> tso organizacja, która zajmuje się ustanawianiem standardów pisania i przesyłu stron WWW. Została założona 1 października 1994 roku przez Tima Berners-Lee, twórcę WWW oraz autora pierwszej przeglądarki internetowej i serwera WWW.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">&lt;caption ... &gt;  &lt;&#8725;caption&gt;</p>
+                           
+                        <p>Caption jest tytułem dla tabeli umieszczanym tuż nad nią. To co determinuje położenie tytułu nad tabelą to atrybut <b>align="..."</b>. Może on przyjnować następukące wartości:</p>
+                        <ul>
+                            <li><b>top</b> - tytuł górny (domyślnie)</li>
+                            <li><b>bottom</b> - tytuł dolny</li>
+                            <li><b>left</b> - ustawienie przy lewej krawędzi tabeli</li>
+                            <li><b>right</b> - przy prawej krawędzi</li>
+                            <li><b>center</b> - na środku</li>
+                        </ul>
+
+                        <img src="../../Obrazy/HTML/8/4.png" alt="caption"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">width="..." oraz height="..."</p>
+                           
+                        <p>te atrybuty poznane nam już wcześniej służą do okteślania szerokości lub długości zarówno całej tabeli, jak i jej wierszy, czy komórek.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">&lt;thread&gt;, &lt;tfoot&gt; oraz &lt;tbody&gt;</p>
+                           
+                        <p>Znaczniki te pokolei umieszczane jako element nadrzędny &lt;tr&gt; oznaczają kolejno</p>
+                        <ul>
+                            <li><b>&lt;thread&gt;</b> - grupuje nagłówek tabeli</li>
+                            <li><b>&lt;tfoot&gt;</b> - grupuje stopkę tabeli</li>
+                            <li><b>&lt;tbody&gt;</b> - grupuje zawartość tabeli</li>
+                        </ul>
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/HTML/8/5.png" alt="dod_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/HTML/8/6.png" alt="dod_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section style="padding-bottom:0px;">    
+                        <h4>Scalanie komórek&#8725;kolumn w tabeli</h4>
+
+                        <p>Do scalania komórek&#8725;kolumn w tabeli służą odpowiednio atrybuty <b>colspan="..."</b> oraz <b>rowspan="..."</b>. Pomiędzy cudzysłowia wstawiamy liczbową warość określającą ilość scaleń sąsiednich pól.</p>
+                        <br/>
+                        <p>Oto przykład zastosowania:</p>
+                        
+                        <div class="explanation_1">
+                            <div class="first">
+                                <img src="../../Obrazy/HTML/8/7.png" alt="scal_1"/>
+                            </div>
+
+                            <div class="second">
+                                <img src="../../Obrazy/HTML/8/8.png" alt="scal_2"/>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                    </section>
+                    
+
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

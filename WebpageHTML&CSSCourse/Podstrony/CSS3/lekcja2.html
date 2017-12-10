@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 2 - Pierwsze reguły stylów</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Poznajmy co nieco właściwości CSS...</h2>
+                     </div>
+                    
+                    <section>
+                        <h4>Elementy tekstowe</h4>  
+                        <p>Na początek zajmijmy sie konfiguracją wyglądu samego tekstu na stronie:</p>
+                    </section>
+                        
+                    <section> 
+                        <p class="acapit">color:</p>
+                           
+                        <p>Odpowiada za zmianę koloru tekstu. Możemy tego dokonać na kilka sposobów, wpisując:</p>
+                        <ul>
+                            <li>wartość słowną (np. red)</li>
+                            <li>wartość heksadecymalną poprzedzoną znakiem "#"</li>
+                            <li>wartość rgb zawartą w nawiasach</li>
+                            <li>wartość rgba zawartą w nawiasach (gdzie "a" po kolejnym przecinku to <b>przezroczystość</b> koloru)</li>
+                        </ul>
+                        <img src="../../Obrazy/CSS3/2/1.png" alt="color"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">font-size:</p>
+                           
+                        <p>Zmienia rozmiar czcionki, której nową wartość podajemy w pikselach.</p>
+                        <img src="../../Obrazy/CSS3/2/2.png" alt="f_size"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">font-family:</p>
+                           
+                        <p>Zmienia typ czcionki. Możemy wykożystać czcioki dostępne przez CSS3 lub też podpiępte przez zewnętrzne arkusze stylów. Użycie cudzysłowiów zależy od typu czcionki. Wszystkie możliwości możemy wsprawdzić na www.w3schools.com</p>
+                        <img src="../../Obrazy/CSS3/2/3.png" alt="f_family"/>
+                   </section>
+                   
+                   <section> 
+                        <p class="acapit">font-weight:</p>
+                           
+                        <p>Zmenia "grubość" czcionki. Przyjmuje następujące wartości:</p>
+                        <ul>
+                            <li>liczbowe <b>100-900</b></li>
+                            <li><b>bold</b></li>
+                            <li><b>bolder</b> - mocniejsze od bold</li>
+                            <li><b>lighter</b> - lżejsze od bold</li>
+                            <li><b>normal</b> - domyślne znaki</li>
+                            <li><b>initial</b> - domyślne</li>
+                            <li><b>inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                   </section>
+                   
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/4.png" alt="f_weight_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/2/4,5.png" alt="f_weight_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section> 
+                        <p class="acapit">font-style:</p>
+                           
+                        <p>Zmienia styl czcionki. Może przyjmować wartości:</p>
+                        <ul>
+                            <li><b>oblique</b> - oblique style (bardziej pochyły niż kursywa)</li>
+                            <li><b>italic</b> - kursywa</li>
+                            <li><b>normal</b> - domyślne znaki</li>
+                            <li><b>initial</b> - domyślne</li>
+                            <li><b>inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                   </section>
+                   
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/5.png" alt="f_style_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/2/6.png" alt="f_style_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section> 
+                        <p class="acapit">font-variant:</p>
+                           
+                        <p>Odpowiada za wartiant czcionki. Może przyjmować wartości:</p>
+                        <ul>
+                            <li><b>small-caps</b> - małe odpowiedniki dużych liter</li>
+                            <li><b>normal</b> - domyślne znaki</li>
+                            <li><b>initial</b> - domyślne</li>
+                            <li><b>inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                   </section>
+                   
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/7.png" alt="f_variant_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/2/8.png" alt="f_variant_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">text-align:</p>
+                           
+                        <p>Odpowiada za położenie tekstu na stronie. Może przyjmować wartośći:</p>
+                        <ul class="bottom_ul">
+                            <li><b>justify</b> - tekst wyjustowany</li>
+                            <li><b>left</b> - do lewej krawędzi</li>
+                            <li><b>right</b> - do prawej krawędzi</li>
+                            <li><b>center</b> - wśrodkowanie</li>
+                            <li><b>initial</b> - domyślne</li>
+                            <li><b>inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                        <img src="../../Obrazy/CSS3/2/9.png" alt="align_1"/>
+                        <img style="padding-bottom:0px;" src="../../Obrazy/CSS3/2/10.png" alt="align_2"/>
+                   </section>
+                   
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">text-decoration:</p>
+                           
+                        <p>Dodaje "dekoracje" do tekstu. Może przyjmować wartośći:</p>
+                        <ul class="bottom_ul">
+                            <li><b>underline</b> - podkreślenie tekstu</li>
+                            <li><b>overline</b> - linia nad tekstem</li>
+                            <li><b>line-through</b> - przekreślenie tekstu</li>
+                            <li><b>none</b> - brak dekoracji</li>
+                            <li><b>initial</b> - domyślne</li>
+                            <li><b>inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                   </section>
+                   
+                                      
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/13.png" alt="td_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/2/14.png" alt="td_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">text-indent:</p>
+                           
+                        <p>Jest to wcięcie w tekście i podajemy go w pikselach.</p>
+                   </section>
+                   
+                                      
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/15.png" alt="ti_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img style="margin-left:-25px;" src="../../Obrazy/CSS3/2/16.png" alt="ti_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">letter-spacing:</p>
+                           
+                        <p>Określa odległości pomiędzy literami w pikselach.</p>
+                   </section>
+                   
+                                      
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/17.png" alt="ls_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img style="margin-left:-25px;" src="../../Obrazy/CSS3/2/18.png" alt="ls_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">line-height:</p>
+                           
+                        <p>Określa odległości pomiędzy liniami tekstu wyrażonymi w pikselach, bądź procentach. Domyślna wartość w większości przeglądarek dla line-height to 110% lub 120%.</p>
+                        <img src="../../Obrazy/CSS3/2/19.png" alt="lh_1"/>
+                        <img src="../../Obrazy/CSS3/2/20.png" alt="lh_2"/>
+                   </section>
+                   
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">:first-letter</p>
+                           
+                        <p>Jest to dodatkowa wartość wstawiana wraz z dwukropkiem zaraz po danym selektorze. Służy do edycji pierwszej litery danego selektora.</p>
+                   </section>
+                   
+                   <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/21.png" alt="fl_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/2/22.png" alt="fl_2"/>
+                        </div>
+                        <div class="third"></div>
+                   </div>
+                   
+                   <section>
+                        <h4>Elementy obramowań</h4>
+                        
+                        <p>Służą do edycji obramowań różnych elementów na stronie. Możemy je zapisywać na różne sposoby:</p>
+                   </section>
+                        
+                   <section> 
+                        <p class="acapit">border:1px solid black;</p>
+                           
+                        <p>Jest to najszybszy i najczęściej stosowany sposob tworzenia obramowań. W kolejnych częsciach wartości oddzielochych spacjami znajdziemy:</p>
+                        <ol style="padding-bottom:10px;">
+                            <li><b>grubość obramowania</b> w pikselach (to samo co: <b>border-width:</b>)</li>
+                            <li><b>typ obramowania</b> (patrz, to samo co: <b>border-style:</b>)</li>
+                            <li><b>kolor obramowania</b> (to samo co: <b>border-color:</b>)</li>
+                        </ol>
+                        <p>Jak widzimy jest to szybszy spobób zapisu niż np. osobne definiowanie koloru obramowania. Taki zapis uproszczony bardzo często występuje w kodzie CSS.</p>
+                        <p>Wartości <b>border-width:</b> oraz <b>border-color:</b> są już nam znane, gdyż warości jakie będą przyjmować będą takie same jak dla samych  <b>width:</b> oraz <b>color:</b>.</p> 
+                        <br/>
+                        <p>Zobaczmy jednak jakie opcje między innymi oferuje nam <b>border-style:</b>:</p>
+                        <ul>
+                            <li><b>dotted</b> - z kropek</li>
+                            <li><b>double</b> - podówjna</li>
+                            <li><b>dashed</b> - z kresek</li>
+                            <li><b>solid</b> - bez niczego</li>
+                            <li><b>hidden</b> - ukryte</li>
+                            <li><b>normal</b> - domyślnie używana przez przeglądarkę</li>
+                            <li><b>initial</b> - domyślne</li>
+                            <li><b>inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/2/11.png" alt="bor_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img style="margin-right:0px;" src="../../Obrazy/CSS3/2/12.png" alt="bor_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <p>Jak widzimy wyżej, również istotną ciekawostką jest podawanie np. grubości dla obramowań dla określonych stron  elementu. Dla czterech wartości kolejność jest następującja: <b>top, rigth, bottom, left</b>. Dla trzech wartości: <b>top, rigth i left, bottom</b>. Natomiast jeśli podalibśmy dwie warośći oddzielone spacją, pierwsza wartość odnosiłaby się do <b>top i rigth, a druga do bottom i left</b>b>.</p>
+                        <p>Ta cecha również często występuje w kodzie CSS3.</p>
+                    </section>
+                    
+                    <section>
+                        <p>Jesteśmy równiez w stanie zmodyfikować określoną stronę obramowania danego elementu poprzez:</p>
+                        <ul>
+                            <li><b>boder-top:</b></li>
+                            <li><b>boder-left-style:</b></li>
+                            <li><b>boder-right-color:</b></li>
+                            <li><b>boder-bottom-width:</b>     itd.</li>
+                        </ul>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">border-radius:</p>
+                           
+                        <p>Wartością podawaną w pikselach określa się zaokrąglenie ramki.</p>
+                        <img src="../../Obrazy/CSS3/2/1.jpg" alt="bor_r"/>
+                    </section>
+                   
+                   <section>
+                        <h4>Elementy list</h4>
+                        
+                        <p>Kolejnymi wartościami które poznamy, będą wartości umożliwiające nam edycję wyglądu list na stronie. Jak pamiętamy z lekcji o listach z kursu html, listy uporządkowane domyślnie były numerowane znakami od 1 rozpoczynając. Natomiast nieuporządkowane, posiadały kropki przy każdym z elementów. Obecnie możemy zmienić ich wygląd za pomocą następujących wartości:</p>
+                   </section>
+                        
+                   <section style="padding-bottom:0px;"> 
+                        <p class="acapit">list-style-type:</p>
+                           
+                        <p>Jest to wartość słuąca do zmiany punktora przy liście. CSS3 oferuje bardzo szeroką gamę takich punktorów. Przyjrzyjmy się najważniejszym z nich:</p>
+                        <img src="../../Obrazy/CSS3/2/23.png" alt="list_style_1"/>
+                        <img src="../../Obrazy/CSS3/2/24.png" alt="list_style_1"/>
+                   </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

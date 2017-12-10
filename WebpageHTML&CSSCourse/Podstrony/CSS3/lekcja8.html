@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 8 - Menu rozwijane pionowe i poziome</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Jak to będzie wyglądać?</h2>
+                        
+                        <img src="../../Obrazy/CSS3/10/1.png" alt="menu_1"/>
+                        <p>W menu rozsuwanym poszczególne znaczniki li po najechaniu, wyświetlają dodatkową listę która zoastała w ich środku utworzona. Zobaczmy po kolei jak tego dokonać wraz z naszą dotychczasową wiedzą zdobytą w tym kursie.</p>
+                        <img src="../../Obrazy/CSS3/10/2.png" alt="menu_2"/>
+                     </div>
+                    
+                    <section>
+                        <h4>Menu poziome</h4>
+                        
+                        <p>Zacznijmy pokolei towrzenie:</p>
+                    </section>
+                      
+                    <section> 
+                        <p class="acapit">1. Tworzymy listy zagnieżdżone z odnośnikami</p>
+                        <img src="../../Obrazy/CSS3/10/3.png" alt="3"/>
+                   </section>
+                      
+                   <section> 
+                        <p class="acapit">2. Konfigurulemy ul, li oraz a tak jak w menu poziomym</p>
+                        <p>Na ul ustawiamy padding i margin 0, aby wygodniej się tworzyło menu</p>
+                        <img src="../../Obrazy/CSS3/10/4.png" alt="4"/>
+                        <img src="../../Obrazy/CSS3/10/5.png" alt="5"/>
+                        <img src="../../Obrazy/CSS3/10/6.png" alt="6"/>
+                   </section>
+                      
+                   <section> 
+                       <p class="acapit">3. Zmieniamy właściwości <b>poistion</b> dla obu list.</p>
+                       <p>Liście podrzędnej ustawiamy <b>top:100%</b> dla najechania tuż pod menu nadrzędne, oraz <b>display:none</b> dla jej zniknięcia.</p>
+                        <img src="../../Obrazy/CSS3/10/7.png" alt="7"/>
+                        <img src="../../Obrazy/CSS3/10/8.png" alt="8"/>
+                    </section>
+                      
+                    <section> 
+                       <p class="acapit">4. Zmieniamy właściwość <b>a</b>  na <b>display:block</b> dla menu podrzędnego.</p>
+                        <img src="../../Obrazy/CSS3/10/9.png" alt="9"/>
+                    </section>
+                     
+                    <section> 
+                       <p class="acapit">5. Ustawiamy pojawienie sie listy podrzędnej po najechaniu na li</p>
+                        <img src="../../Obrazy/CSS3/10/10.png" alt="10"/>
+                    </section>
+                      
+                    <section> 
+                       <p class="acapit">6. Przesuwamy odpowiednią listę podrzędna w prawo</p>
+                        <img src="../../Obrazy/CSS3/10/11.png" alt="11"/>
+                    </section>
+                       
+                    <section>
+                        <h4>Menu pionowe</h4>
+                        
+                        <p>Zacznamy tworzenie w ten sam sposób co na początku menu poziome:</p>
+                    </section>
+                      
+                    <section> 
+                        <p class="acapit">1. Tworzymy listy zagnieżdżone z odnośnikami</p>
+                        <img src="../../Obrazy/CSS3/10/3.png" alt="3"/>
+                   </section>
+                      
+                   <section> 
+                        <p class="acapit">2. Konfigurulemy ul, li oraz tak jak w menu poziomym</p>
+                        <p>Na ul ustawiamy padding i margin 0, aby wygodniej się tworzyło menu. Wartość a pozostawiamy do konfiguracji na następne punkty.</p>
+                        <img src="../../Obrazy/CSS3/10/4.png" alt="4"/>
+                        <img src="../../Obrazy/CSS3/10/5.png" alt="5"/>
+                   </section>
+                      
+                   <section> 
+                       <p class="acapit">3. Zmieniamy właściwości <b>poistion</b> dla obu list.</p>
+                       <p>Liście podrzędnej ustawiamy <b>top:0%</b> dla najechania na menu nadrzędne, oraz <b>display:none</b> dla jej zniknięcia.</p>
+                        <img src="../../Obrazy/CSS3/10/7.png" alt="7"/>
+                        <img src="../../Obrazy/CSS3/10/13.png" alt="13"/>
+                    </section>
+                      
+                    <section> 
+                       <p class="acapit">4. Zmieniamy właściwości <b>a</b> na całej stronie na <b>display:block</b>.</p>
+                        <img src="../../Obrazy/CSS3/10/14.png" alt="14"/>
+                    </section>
+                     
+                    <section> 
+                       <p class="acapit">5. Ustawiamy pojawienie sie listy podrzędnej po najechaniu na li</p>
+                        <img src="../../Obrazy/CSS3/10/10.png" alt="10"/>
+                    </section>
+                      
+                    <section> 
+                       <p class="acapit">6. Przesuwamy całą listę podrzędna w prawo</p>
+                        <img src="../../Obrazy/CSS3/10/15.png" alt="11"/>
+                    </section>
+                </article>
+            </div>
+
+             <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

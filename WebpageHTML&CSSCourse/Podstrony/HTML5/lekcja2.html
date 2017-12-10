@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 2 - Znaczniki</h1>
+                <article>
+                    <div class="intro">
+                        <h2>Czym jest znacznik ?</h2>
+                    
+                        <p>Znacznik jest instrukcją formatującą język HTML. Informuje przeglądarkę o swoim typie i na podstawie tego dokonuje odpowiednich transformacji swojej zawartości.<br/>Każdy znacznik posiada 2 charakterystyczne dla siebie znaki " &lt; " i " &#8725; &gt; ". Są one odpowiednio: znakiem rozpoczęcia i zakończenia znacznika.</p>
+                    </div>
+
+                    <section>
+                        <h4 class="center">Rodzaje znaczników</h4>
+                        
+                        <div class="explanation_2">
+                            <div class="first">
+                                <h5 class="center">Kontenerowe &#8725; Podwójne</h5>
+
+                                <p>Charakteryzują się wysępowaniem "znacznika" początkowego, np: &lt;ZNACZNIK&gt; i końcowego: &lt;&#8725;ZNACZNIK&gt;. Jego zawartość formatowana znajduje się pomiędzy znakiem rozpoczęcia i zakończenia.</p>
+                                
+                                <img src="../../Obrazy/HTML/2/1.png" alt="znacznik_kontenerowy"/>
+                                <p>Otwarcie zancznika, jego zamknięcie i treść zawarta pomiędzy nimi tworzą <b>element</b>.</p>
+                            </div>
+
+                            <div class="second">
+                                <h5 class="center">Pojedyncze &#8725; Samodzielne &#8725; Puste</h5>
+
+                                <p>To żadziej występujący typ znacznika. Nie posiada on odpowiedników: początkowy i końcowy. Zawartość formatowana znajduje się w jego wnętrzu, bądź nie występuje w ogóle, np: &lt;ZNACZNIK&#8725;&gt;</p>
+                                
+                                <img src="../../Obrazy/HTML/2/2.png" alt="znacznik_pojedynczy"/>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h4>Zasady kożystania ze znaczników</h4>
+                        
+                        <p>Istnieją pewne nienaruszalne zasady, których przestrzeganie przy tworzeniu znaczników, pozwoli na uzyskanie czystego od błędów na walidatotrze kodu.</p>
+                        
+                        <ol>
+                            <li>Nie zagnieżdżaj znaczników "na krzyż", ale "kaskadowo".</li>
+                            <li>Zamykaj wszystie znaczniki.</li>
+                            <li>Używaj wyłącznie małych liter (również do <b>atrybutów</b> w ich środku, ale o tym wspomnimy później).</li>
+                            <li><b>Atrybuty</b> wpisuj w cudzysłowiach.</li>
+                            <li>Uważaj ze znakami specjalnymi, gdyż mogą zostać nieodczytane niepoprawnie przez niektóre przeglądarki. Zamiast tego wykożystuj <b>encje</b>.</li>
+                            <li>Nie używaj <b>zdeprecjonowanych</b> znaczników, czyli takich, które wyszły już z użycia.</li>
+                        </ol> 
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/HTML/2/3.png" alt="zasady_kożystania_ze_znaczników_1_zle"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/HTML/2/4.png" alt="zasady_kożystania_ze_znaczników_1_dobrze"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                        
+                    <section>    
+                        <h4>Co nieco o encjach</h4>
+
+                        <p>Encja to sposób zapisania znaku, który nie posiada swojego odpowiednika w <mark>kodzie ASCII</mark>.<br/>Czym jest ASCII? To 7-bitowy kod przyporządkowujący liczby z zakresu 0−127: literom alfabetu angielskiego, cyfrom, znakom przestankowym i innym symbolom oraz poleceniom sterującym. Na przykład litera „a” jest kodowana jako liczba 97, a znak spacji jest kodowany jako 32. Przeglądarki aby poprawnie wyświelać informacje kożystają z ASCII (w formie UFT-8) i encji.</p><br/>
+                        <p>Tak więc znaki, które nie posiadają przyporządkowanych dla nich wartości liczbowych w ASCI, mają swoje własne odpowiedniki w encjach. Może się zdarzyć taka sytuacja, że po prostu dany znak jest np integralną częścią znacznika, co sprawia iż również będzie potrzebował swojego odpowiednika w encji.</p>
+                        <p>Encja zawsze rozpoczyna się znakiem <b>ampersand (&amp;)</b>, a kończy znakiem <b>średnika (;)</b>.</p>
+                        <br/><p>Przykłady najważniejszych encji:</p>
+                        
+                        <table border="1" class="table_with_margin_top">
+                            <tr>
+                                <td><b>Znak</b></td>
+                                <td><b>Encja</b></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>&amp;</td>
+                                <td>&amp;amp;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>&lt;</td>
+                                <td>&amp;lt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>&#8725;</td>
+                                <td>&amp;#8725;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>&gt;</td>
+                                <td>&amp;gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>&copy;</td>
+                                <td>&amp;copy;</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section class="last">
+                        <h4>Nowe słownictwo</h4>
+                        
+                        <table border="1">
+                            <tr>
+                                <td><b>Przeglądarka</b></td>
+                                <td>To narzędzie kreujące zawertość strony internetowej (przetwarza znaczniki). Wysyła żądania wysłania strony www do serwera w celu jej pobrania i wyświetlenia.</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><b>Serwer</b></td>
+                                <td>Pobiera żądanie strony www od przeglądarki i wysyła ją. Ma stały adres IP, do którego odwołuje sie przeglądarka.</td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

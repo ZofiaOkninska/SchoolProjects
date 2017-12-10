@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 3 - Model pudełkowy i elementy tła</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Czym jest model pudełkowy?</h2>
+                        
+                        <p>Model pudęłkowy odnosi się do sposobu wyświetlenia elementów na stronach internetowych. Każdy z tworów utworzonych przez HTML5 jest przedstawiany jako pewien prostokąt. Możemy ustawić dla niego szerokość, wysokość, jego kolor tła oraz ustalic jego pozycję na stronie (o tym w kolejnych lekcjach).</p>
+                        <p>I tak dla każdego elementu wyróznimy poszczególne obszary będące jego integralnymi częśćmi:</p>
+                        <img src="../../Obrazy/CSS3/3/1.png" alt="mp_1"/>
+                        <p>Zobaczmy je z osobna:</p>
+                        <ol>
+                            <li><b>Content</b> czyli zawartość konkretnego pojemnika. To do niej odnoszą sie takie selektory jak <b>width</b> czy <b>height</b>. Należy o tym pamiętać przy rozmieszczaniu elementów na stronie, gdyż pozostałe wartości, tzn dodatkowe paddingi, bordery i marginy należy dodać do nich aby otrzymać całkowite rozmiary elementu.</li>
+                            <li><b>Padding</b> jest inaczej <b>marginesem wewnętrznym</b>. To znaczy konkretną odległością od zawartości elementu do jego obramowania (borderu).</li>
+                            <li><b>Border</b> - obramowanie elementu. Do tego poziomu do zawartości elementu poczynając określa się wartość <b>background</b>.</li>
+                            <li><b>Margin</b> to inaczej margines. Jest on przezroczysty (<b>transparent</b>), więc wartość <b>background</b> nie ma na niego wpływu.</li>
+                        </ol>
+                        <p style="padding-top:15px;">Każdy z wyżej wymienionych elementów oprócz content może przjmować takie wartości jak:</p>
+                        <ul>
+                            <li>top</li>
+                            <li>bottom</li>
+                            <li>left</li>
+                            <li>right</li>
+                        </ul> 
+                        <p>Wartości dla każdych z tych elementów możemy opodawać w pikselach lub procentach. Istnieją rónież jeszcze inne jednostki, kórymi możemy się posługiwać przy określaniu pewnych wartości ...</p> 
+                    </div>
+                    
+                    <section>
+                        <h4>Co nieco o jednostkach</h4>  
+                        <p>Jednostki, które używamy w CSS możemy podzielić na względne i bezwzględne i procentowe. Wartości wyrażone <b>w procentach</b> nie są dla nas niczym nowym i dzięki ich zastosowaniu możemy zachować proporcje przy wyświetlaniu tych samych elementów na ekranach o różnych rodzielczościach. Przyjżyjmy się natomiast dwóm pozostałym typom jednostek.</p>
+                    </section>
+                    
+                    <div class="explanation_2">
+                            <div class="first">
+                                <h5 class="center">Jednostki względne</h5>
+
+                                <p>Względne jednostki długości stosujemy, gdy chcemy się odwołać do rozmiaru innego elementu (np. wysokości aktualnie używanej czcionki). W tym celu możemy wykorzystać tak zwaną <b>jednostkę em</b>, która odwołuje się do wysokości aktualnej czcionki.</p>
+                                <p>Załóżmy ża na elemencie nadrzędnym, np. znaczniku html ustawiono czcionkę na 16px. Jeżeli zatem na elelmencie podrzędnym ustawimy czcionkę na 2em, to wynikowo wielkość tekstu w nim będzie wynosiła 32px.</p>
+                            </div>
+
+                            <div class="second">
+                                <h5 class="center">Jednostki bezwzględne</h5>
+
+                                <p>Jednostki bezwzględne są użyteczne wtedy, gdy fizyczne własności medium wyjściowego (np. monitor) są znane. Należy ich używać zawsze wtedy, gdy zależy nam, aby wybrany element zajmował zawsze taki sam obszar na ekranie, niezależnie od rozdzielczości i wielkości monitora. Choć rozdzielczość może się zmienić, to jeśli element taki miał wymiar np. 10cm, to tak pozostanie również w nowej rozdzielczości.</p>
+                                <p>Przykłądowe typy jednostek bezwzględnych</p>
+                                <ul>
+                                    <li>in (cale)</li>
+                                    <li>cm</li>
+                                    <li>mm</li>
+                                    <li>px</li>
+                                </ul>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                    
+                    <section>
+                        <h4>Elementy tła</h4>  
+                        <p>Na tło naszej witryny możemy ustawić kolor lub obrazek. Background możemy edytować dla znacznika &lt;body&gt; aby dotyczył całej strony, jednak nic nie stoi na przeszkodzie, aby różnym elementom na całej stronie (np. nagłówki, div'y z przyszłej lekcji i wiele innych) różwnież takie tło ustawić. Zobaczmy jakie wartości możemy ustawić dla niego:</p>
+                    </section>
+                        
+                    <section> 
+                        <p class="acapit">background-color:</p>
+                           
+                        <p>Jest dokładnie tym samym co wartość <b>clor:</b> dla czcionki tekstu. Przyjmuje takie same wartości jak ona. Istnieje również możliwość nadania ostatnio wymienianych wartości takich jak:</p>
+                        <ul>
+                            <li><b>Transparent</b> - przezroczyste</li>
+                            <li><b>Initial</b> - domyślne</li>
+                            <li><b>Inherit</b> - przejęte od elementu nadrzędnego</li>
+                        </ul>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">background-image:url(...);</p>
+                           
+                        <p>Służy do umieszczania zwenętrzego obrazka jako tła dla danego elementu. W nawiasach po url podajemy ścieżke do elementu używając wybranego typu adresowania.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">background-repeat:</p>
+                           
+                        <p>Określa powtarzalność obrazka na stronie. Może przyjmowac wartości:</p>
+                        <ul>
+                            <li><b>no-repeat</b> - obrazek się nie powtórzy na stronie</li>
+                            <li><b>repeat-x</b> - obrazek będzie się powtarzać względem osi OX</li>
+                            <li><b>repeat-y</b> - obrazek będzie się powtarzać względem osi OY</li>
+                        </ul>
+                        <p style="padding-top:15px;">Oto jak działa <b>background-repeat:repeat-x;</b></p>
+                        <img src="../../Obrazy/CSS3/3/2.png" alt="br_1"/>
+                        <p style="padding-top:15px;">Oraz <b>background-repeat:repeat-y;</b></p>
+                        <img src="../../Obrazy/CSS3/3/3.png" alt="br_2"/>
+                   </section>
+                   
+                   <section> 
+                        <p class="acapit">background-position:</p>
+                           
+                        <p>Przyjmuje standardowe wartości dla umieszczenia go w określonym miejscu danego pojemnika (o ile ma od niego mniejszą wysykość czy szerokość):</p>
+                        <ul>
+                            <li>top</li>
+                            <li>bottom</li>
+                            <li>left</li>
+                            <li>right</li>
+                        </ul>
+                   </section>
+                   
+                   <section> 
+                        <p class="acapit">background-attachment:</p>
+                           
+                        <p>Definiuje w jaki sposób będzie zachowywał się obrazekm, gdy będziemy scrollować w dół stronę</p>
+                        <ul>
+                            <li><b>fixed</b> - grafika pozostaje przez cały czas statyczna pomimo scrollowania</li>
+                            <li><b>scroll</b> - obrazek jest scrollowany wraz ze stroną</li>
+                            <li><b>inherit</b> - wałsność przejęta od elementu nadrzędnego</li>
+                        </ul>
+                   </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

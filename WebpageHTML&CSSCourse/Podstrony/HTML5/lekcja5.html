@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 5 - Listy</h1>
+                <article>
+                    <div class="intro">
+                        <h2>Typy list w języlu HTML</h2>
+                    
+                        <p>W języku html możemy się zetknąć z kilkoma rodzajami list. Najważniejsze dwie to lista uporządkowana oraz nieuporządkowana. Przyjrzyjmy się im:</p>
+                        
+                        <div class="explanation_1">
+                            <div class="first">
+                                <img src="../../Obrazy/HTML/5/1.png" alt="list_1"/>
+                            </div>
+                            <div class="second">
+                                <img src="../../Obrazy/HTML/5/2.png" alt="list_2"/>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                        
+                        <p>Jak widzimy listy po prawej stronie - w przeciwieństwie do tych po lewej - są w jakiś sposób <b>uporządkowane</b> w określonej kolejności. To sprawia, że będziemy je nazywać <b>listą uporządkowaną</b>. Sposób numeracji zależy od edycji kodu w CSS3, o czym wspominy dopiero w kursie tegoż języka.<br/>Po lewej stronie widać listę, której punktory są kropkami. Jest to <b>lista nieuporządowana</b>, gdyż kolejne jej wiersze nie są w żaden sposób ułożone w określonej kolejności. Przyjrzyjmy się im obu z osobna.</p>
+                     </div>
+                    
+                     <section>
+                         <h4>&lt;ul&gt;&lt;&#8725;ul&gt; - lista nieuporządowana </h4>
+                        
+                         <p>W znacznikach &lt;ul&gt;&lt;&#8725;ul&gt; umieszczamy listę nieuporządkowaną. Odpowiednikami wierszy w liście są dodatkowe znaczniki &lt;li&gt;&lt;&#8725;li&gt; po jednym dla każdego z nich.</p>
+                     </section>
+                                    
+                     <div class="explanation_2">
+                        <div class="first">
+                                <img src="../../Obrazy/HTML/5/3.png" alt="ul_1"/>
+                        </div>
+
+                        <div class="second">
+                                <img src="../../Obrazy/HTML/5/4.png" alt="ul_2"/>
+                        </div>
+                        <div class="third"></div>
+                     </div> 
+                     
+                     <section>
+                        <h4>&lt;ol&gt;&lt;&#8725;ol&gt; - lista uporządowana </h4>
+                        
+                        <p>W &lt;ol&gt;&lt;&#8725;ol&gt; znajdzie się lista nieuporządkowana. Odpowiednikami wierszy również są znaczniki &lt;li&gt;&lt;&#8725;li&gt; po jednym dla każdego wiersza. Domyślnie występuje numerowanie numeryczne.</p>
+                     </section>
+                                    
+                    <div class="explanation_2">
+                        <div class="first">
+                                <img src="../../Obrazy/HTML/5/5.png" alt="b_1"/>
+                        </div>
+
+                        <div class="second">
+                                <img src="../../Obrazy/HTML/5/6.png" alt="b_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div> 
+                    
+                    <section>
+                        <h4>O listach zagnieżdżonych</h4>
+                        
+                        <p>Listy zadnieżdżone, to takie, w których sładzie znajdują się kolejne listy. Każda z nich może być innego typu. zadnieżdżenia dokonujemy przez umieszczenie <b>w zaczniku &lt;li&gt;&lt;&#8725;li&gt;</b> kolejnego &lt;ol&gt;&lt;&#8725;ol&gt; lub &lt;ul&gt;&lt;&#8725;ul&gt;.</p>
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <p>W taki oto sposób tworzymy listę <br/>uporządkowaną z zagnieżdżonymi w jej środku listami nieuporządkowanymi trzystopniowo.</p>
+                             <img src="../../Obrazy/HTML/5/8.png" alt="zagniezdzone_2"/>
+                        </div>
+
+                        <div class="second">
+                            <img style="padding-top:0px;" src="../../Obrazy/HTML/5/7.png" alt="zagniezdzone_1"/>
+                        </div>
+                        
+                        <div class="third"></div>
+                    </div>
+                        
+                    <section>    
+                        <h4>&lt;dl&gt;&lt;&#8725;dl&gt; - lista definicji</h4>
+
+                        <p>Jest to sposób zapisu definicji na stronie w przypadku gdy wyjaśnianych słów jest więcej. Kożystamy ze zancznika <b>&lt;dl&gt;&lt;&#8725;dl&gt;</b> (definition list), który implementuje listę oraz zawartych w nim dwóch kolejnych: <b>&lt;dt&gt;&lt;&#8725;dt&gt;</b> - innaczej <b>słowo definiowane</b>, oraz <b>&lt;dd&gt;&lt;&#8725;dd&gt;</b> - <b>jego opis</b>.</p>
+                        
+                        <img src="../../Obrazy/HTML/5/9.png" alt="dl_1"/>
+                        <img src="../../Obrazy/HTML/5/10.png" alt="dl_2"/>
+                    </section>
+                    
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

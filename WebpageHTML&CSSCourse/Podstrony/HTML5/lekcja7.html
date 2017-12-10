@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 7 - Hiperłącza, adredsowanie i kotwice</h1>
+                <article>
+                    <div class="intro">
+                        <h2>Czym są hiperłącza ?</h2>
+                    
+                        <p>Gdy przypatrzymy się nazwie, słowo "łącza" powinno nam nasunąć jakieś skojażenie. Tak. Hiperłącza to pewnego rodzaju łączniki z jakimś elementem znajdującym się w innym miejscu danego dokumentu lub poza nim. Najczęściej jest to wyróżniony w odpowiedni sposób tekst lub obrazek. Po ich kliknięciu przechodzimy na inną stronę lub do innego miejsca w dokumencie. Zobaczmy jak się nimi prawidłowo poługiwać.</p>
+                     </div>
+                     
+                    <section>
+                        <h4>&lt;a  href="..." &gt; ..... &lt;&#8725;a&gt;</h4>
+                        
+                        <p>Znacznik &lt;a  href="..." &gt; ..... &lt;&#8725;a&gt; jest kontenerowy, gdyż składa się ze znacznika rozpoczęcia i zakończenia. Zawiera również w pierwszym z nich znany nam już wcześniej atrybut <b>href="..."</b> do umieszcznia źródła.</p>
+                    </section>
+                    
+                    <section>
+                        <h4>Adresowanie względne  i bezwzględne</h4>
+                        
+                        <p>Tak jak wspomnieliśmy we wcześniejsiejszej lekcji o umieszczaniu grafiki na stronie, każdy element umieszczemy na witrynie trzeba zaadresować. Podając ścieżkę do jakiegoś źródła kożystamy tzw. <b>adresowania względnego</b> lub <b>bezwzględnego</b>. Czym oba się różnią? <br/>W adresowaniu bezwględnym podaje się pełną ścieżkę do źródła, a we względnym od jakiegoś punktu odniesienia, np folderu, w którym zawarty jest plik. Odwoływać również możemy się do stron internetowych z konkretynym adresem.</p>
+                        <br/>
+                        <p>Przykład adresowania <b>bezwzględnego</b>:</p>
+                        <img src="../../Obrazy/HTML/7/1.png" alt="adr_1"/>
+                        <p>Przykład adresowania <b>względnego</b>:</p>
+                        <img src="../../Obrazy/HTML/7/2.png" alt="adr_2"/> 
+                        <p>Jak wydzimy <b>&lt;!--<i>treść_komentarza</i>--&gt;</b> jest sposobem umieszczania komentarzy w kodzie html.</p>                      
+                    </section>
+                        
+                    <section>    
+                        <h4>Kotwice</h4>
+
+                        <p>Kotwice to odrębna nazwa dla hiperłączy w obrębie danej strony internetowej. Tworzymy je poprzez nadanie artybutu <b>name="..."</b> elementowi do którego odnosić ma się link. Natępnie odwołujemy się do tego elemnetu przez <b>href="#<i>naza_nadana_przez name</i>".</b> Oto przykład zastosowania tego atrybutu:</p>
+                        <br/>
+                        <p>Nadanie artybutu name="...":</p>
+                        <img src="../../Obrazy/HTML/7/3.png" alt="anchor_1"/>
+                        <p>Odwołanie, które możemy umieścić gdziekolwiek indziej na stronie:</p>
+                        <img src="../../Obrazy/HTML/7/4.png" alt="anchor_2"/>  
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

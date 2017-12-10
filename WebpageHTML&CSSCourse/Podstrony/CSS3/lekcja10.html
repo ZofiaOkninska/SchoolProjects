@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 10 - Formularze 2</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Nowe atrybuty dla input oraz innych typów pól</h2>
+                    
+                        <p>Poznajmy nowe atrybuty dla pól deteminujące <b>sposób nawigacji</b> po formularzu oraz <b>możliwości wprowadzania danych</b>.</p>
+                     </div>
+                        
+                    <section> 
+                        <p class="acapit">readonly="readonly"</p>
+                           
+                        <p>Jest to typ wprowadzania danych, umożliwiający jedynie wpisanie wartości do pola lub jej skopiowanie. Nie można zatwierdzić jej przez przycisk submit.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">disabled="disabled"</p>
+                           
+                        <p>Oznacza, że dana kontrolka jest niedostępna i nie można do niej wprawadzać danych.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">tabindex="..."</p>
+                           
+                        <p>Określa kolejność zaznaczania pól podczas nawigacji klawiszem <b>Tab</b>. Podajemy do niej wartości liczbowe, przy czym 1 ma pierwszą kolejność zaznaczenia, 2 - drugą itd.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">accesskey="..."</p>
+                           
+                        <p>To wartość literowa dla danego pola, po której kliknięciu element zostanie zaznaczony. Inaczej: <b>skrót klawiszowy</b>. Należy jednak pamiętać o sprawdzeniu domyślnych skrótów klawiszowych poszczególnych przeglądarek, aby się one nie pokrywały.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">maxlenght="..." i size="..."</p>
+                           
+                        <p>Atrybut <b>maxlenght="..."</b> determinuje maksymalną ilość zanaków jaka będzie mogła być wpisana do pola. Natomiast pole <b>size="..."</b>, określi nam szerokość jaką przyjmie pole liczone w ilościach znaków. <b>Aby ta opcja działa należy nie mieć ustaiownej żadnej szerokości na polu input!</b>.</p>
+                    </section>
+                    
+                    <section>
+                        <h4>Nowe pola formularzy</h4>
+                        
+                        <p>Zobaczmy teraz w jaki sposób zaimplementować specjalne pola wyboru dla znacznika &lt;input ... &#8725;&gt;</p>
+                    </section>
+                    
+                     <section> 
+                        <p class="acapit">type="checkbox"</p>
+                           
+                        <p>Jest to pole wielokrotnego wyboru. Pojedynczy input odpowiada jednej opcji wyboru. Może przyjmować dodatkowy atrybut <b>checked="checked"</b>, który domyślnie zaznaczy wybraną odpowiedź.</p>
+                        <img src="../../Obrazy/CSS3/12/1.png" alt="t1"/>
+                        <img src="../../Obrazy/CSS3/12/2.png" alt="t2"/>
+                    </section>
+                    
+                     <section> 
+                        <p class="acapit">type="radio"</p>
+                           
+                        <p>Jest to pole jednokrotnego wyboru. Pojedynczy input odpowieda jednej opcji wyboru. Dla każdej z tej opcji konieczna jest wybranie <b>tego samego name</b>!</p>
+                        <img src="../../Obrazy/CSS3/12/3.png" alt="t3"/>
+                        <img src="../../Obrazy/CSS3/12/4.png" alt="t4"/>
+                    </section>
+                    
+                     <section> 
+                        <p class="acapit">type="hidden"</p>
+                           
+                        <p>Pole ukryte, lecz widoczne na pasku adresu.</p>
+                    </section>
+                    
+                     <section> 
+                        <p class="acapit">type="button"</p>
+                           
+                        <p>Określa przycisk. Musi być oprogramowane.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">type="file"</p>
+                           
+                        <p>Za jego pomocą można ładować pliki do formularza. Wymaga ustawienia na form <b>method="post"</b> oraz <b>enctype="multipart/formdata"</b>.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">type="image"</p>
+                           
+                        <p>Obrazek staje się przyciskiem. Wymaga ustawienia na form <b>method="post"</b>. Posiada dodatkowe atrybuty:</p>
+                        <ul>
+                            <li><b>name="..."</b></li>
+                            <li><b>src="..."</b></li>
+                            <li><b>alt="..."</b></li>
+                        </ul>
+                    </section>
+                    
+                      <section> 
+                        <p class="acapit">type="reset"</p>
+                           
+                        <p>Czyści wypełnienie formularzy.</p>
+                    </section>
+                    
+                      <section> 
+                        <p class="acapit">type="file"</p>
+                           
+                        <p>Za jego pomocą można ładować pliki do formularza. Wymaga ustawienia na form <b>method="post"</b> oraz <b>enctype="multipart/formdata"</b>.</p>
+                        <img src="../../Obrazy/CSS3/12/6.png" alt="t1"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">&lt;button&gt;</p>
+                           
+                        <p>To nacznik kontenerowy do którego można wprowadzać takie <b>type="..."</b> jako atrybut jak:</p>
+                        <ul class="bottom_ul">
+                            <li><b>button</b></li>
+                            <li><b>reset</b></li>
+                            <li><b>submit</b></li>
+                        </ul>
+                        <p>Są one odzwieciedleniami wcześniejszych pól. Pomiędzy znaczniki możemy wprowadzić koknkretną zawartość  dla tego pola, np. teskt lub obrazek.</p>
+                    </section>
+                    
+                     <section>
+                        <h4>Lista wyboru</h4>
+                        
+                        <p>Zobaczmy teraz w jaki sposób zaimplementować liste wyboru:</p>
+                        <img src="../../Obrazy/CSS3/12/7.png" alt="t1"/>
+                        <img src="../../Obrazy/CSS3/12/8.png" alt="t2"/>
+                         <img src="../../Obrazy/CSS3/12/9.png" alt="t3"/>
+                        <img src="../../Obrazy/CSS3/12/10.png" alt="t4"/>
+                         <img src="../../Obrazy/CSS3/12/11.png" alt="t5"/>
+                        <img src="../../Obrazy/CSS3/12/12.png" alt="t6"/>
+                    </section>
+                    
+                    <section>
+                        <h4>Label, fieldset, legend oraz textbox</h4>
+                        
+                        <p>Zobaczmy teraz w jaki sposób zaimplementować wydzielone obramowania dla list oraz większy obszar na wprowadzanie testu.</p>
+                        <p>W zanczniku form zawrzemy:</p>
+                        <img src="../../Obrazy/CSS3/12/13.png" alt="t7"/>
+                        <img src="../../Obrazy/CSS3/12/14.png" alt="t8"/>
+                         <img src="../../Obrazy/CSS3/12/15.png" alt="t9"/>
+                        <img style="margin-bottom:0px;" src="../../Obrazy/CSS3/12/16.png" alt="t10"/>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

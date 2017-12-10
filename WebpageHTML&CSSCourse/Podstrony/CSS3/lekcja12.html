@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 12 - Animacje</h1>
+               <article>
+                    <div class="intro">
+                        <h2>O animacjach</h2>
+
+                        <p>Animacje są dodatkowym elemenetem na stronie, który jest w stanie w bardzo ciekawy sposób urozmaicić jej wygląd i interaktywność. Na początku przyjrzymy się w jaki sposób obracać i zmieniać skale elementów, a następnie zobaczymy jak do tego dodać ruch.</p>
+                     </div>
+                    
+                    <section>
+                        <h4>Zatosujmy transformacje!</h4>
+                        
+                        <p>Każdemu elementowi na stronie możemy przypisać w arkuszach stylów selektor <b>transform</b>.Jak sama nazwa wsakuje będzie on powodował jakąś zmianę danego elementu w pewien określony sposób. Wartości jakie borze przyjmowac ten selektor to:</p>
+                    </section>
+                        
+                    <section> 
+                        <p class="acapit">transform:rotate(...deg);</p>
+                           
+                        <p>Selektor o wartości rotate powoduje, że dany element obróci się o kąt podany w nawiasach z przyrostkiem <b>deg</b>.</p>
+                        <img src="../../Obrazy/CSS3/22/1.png" alt="tr_1"/>
+                        <img src="../../Obrazy/CSS3/22/2.png" alt="tr_2"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">transform:scale(<i>scale</i>);</p>
+                           
+                        <p>W tym wypadku zostanie zmieniona skala naszego elementu w zależności od wartości umieszczonej w nawiasach. I tak wartość 2 zwiększy nam elememt dwukrotnie, 0.5 dwukrotnie zminejszy, a 1 pozostawi bez zmian.</p>
+                        <img src="../../Obrazy/CSS3/22/3.png" alt="tr_3"/>
+                        <p>Możemy również zapisać scale w postaci <b>scaleX(<i>scale</i>);</b> lub <b>scaleY(<i>scale</i>);</b> dla zmienienia jedynie po jednej z tych współrzędnych.</p>
+                        
+                        <p>Obie wartości mozemy zapisać również tuż po spobie następująco: <b>transform:rotate(...deg) scale(<i>scale</i>);</b>.</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">transform:skew(...deg, ...deg);</p>
+                           
+                        <p>Może oczywyście występowac w wersjach gdzie:</p>
+                        <ul>
+                            <li><b>skew(...deg, ...deg)</b> - przechylenie elementu w lewo&#8260;prawo oraz w górę&#8260;dół</li>
+                            <li><b>skewX(...deg)</b> - przechylenie elementu w lewo&#8260;prawo</li>
+                            <li><b>skewY(...deg)</b> - przechylenie elementu w górę&#8260;dół</li>
+                        </ul>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">transform:translate(...px, ...px);</p>
+                           
+                        <p>Przesunięcie elemetu względem osi X i Y lub też osobno w zapisie <b>translateX(...px);</b> &#8260; <b>translateY(...px);</b></p>
+                    </section>
+                    
+                    <section>
+                        <h4>Co będzie potrzebne do stworzenia ruchomej animacji?</h4>
+                        
+                        <p>Aby stworzyć ruchomą animację potrebujemy przejść przez 2 istotne kroki:</p>
+                        <ol class="bottom_ul">
+                            <li>Definicja animacji</li>
+                            <li>Zastosowanie animacji do konkretnego elementu</li>
+                        </ol>
+                        <p>Zobaczmy więc pokolei.</p>
+                        <img src="../../Obrazy/CSS3/22/4.png" alt="kf_1"/>
+                    </section>
+                    
+                    <section>
+                        <h4>@keyframes</h4>
+                        
+                        <p>Keyframes rozpoczynamy od znaku małpy, następnie umieszczamy odpowiednie przedrostki dla różnych przeglądarek i samo słowo "keyframes". Po znaku spacji zapisujemy nazwę animacji, a w wąsach całą jej treść.<br/> Treścią może być np powyższe <b>from</b> oraz <b>to</b> (również z zawartością zapisaną w wąsach) lub odpowiadające temu własności procentowe. <b>From</b> określa stan początkowy animowanego elementu, a  <b>to</b> jego stan końcowy. Dla tego określenie wartości procentowej (np 50%) opisze nam zachowanie elementu w samym środku animacji.</p>
+                        <p><b>Left</b> spowoduje przesunięcie się z prawej strony w lewą elementu, natomiast <b>opacity</b> pojawienie się go.</p>
+                    </section>
+                    
+                    <section>
+                        <h4>Przypisanie animacji do elementu</h4>
+                        
+                        <p>Na początku należy pamiętać, aby na elemencie animowanym ustawić <b>position:absolute</b>!</p>
+                        <p>Odbywa się poprzez przypisanie selektora <b>animation:</b> z nazwą wcześniej utwożonej animacji i czasu jej trwania w sekundach.</p>
+                        <p>Do <b>animation</b> możemy również przypisać dodatkowe wartości ją określającje:</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">animation:<i>name</i> | <i>time</i> | <i>timing-function</i> | <i>delay</i> | <i>iteration-count</i> | <i>direction</i>;</p>
+                        
+                        <p>Znaczenia kolejnych wartości:</p>
+                        <table style="margin-bottom:15px;" border="1" class="table_with_margin_top">
+                            <tr>
+                                <td><b>Wartość</b></td>
+                                <td><b>Znaczenie</b></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><b>timing-function</b></td>
+                                <td>Jest to rozkład czasowy definiujący zachowanie się animacji na jej początku lub końcu
+                                    <ul>
+                                        <li><b>linear</b> - stałe tempo</li>
+                                        <li><b>ease-in</b> - wolniej na początku</li>
+                                        <li><b>ease-out</b> - wolniej na końcu</li>
+                                        <li><b>ease-in-out</b> - wolniej na początku i końcu</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><b>delay</b></td>
+                                <td>To opóźnienie całej animacji (poklatkowo). Zapisujemy go za pomocą <b>steps(...)</b> gdzie wpisujemy na ile klatek ma być animacja podzielona
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><b>iteration-count</b></td>
+                                <td>Liczba powtórzeń animacji. Zapisujemy ją jako wartość liczbową lub jako <b>infinite</b>, gdy chcemy aby wykonywała się w niekończoność.
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><b>direction</b></td>
+                                <td>Jest to "kierunek" wykonania się animacji:
+                                    <ul>
+                                        <li><b>reverse</b> - wykonanie się animacji od tyłu</li>
+                                        <li><b>alternate</b> - wykonanie od początku</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>Oczywiście wszystkie wartości możemy zapisać w postaci np:</p>
+                        <img style="margin-bottom:0px;" src="../../Obrazy/CSS3/22/5.png" alt="an_1"/>
+                        <p>Jedynie <b>time</b> jest dla nas wyjątkiem i zapisujemy go jako <b>animation-duration:</b>.</p>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

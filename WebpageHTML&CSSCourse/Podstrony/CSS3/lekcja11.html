@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 11 - Gradienty</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Czym jest Gradient?</h2>
+                        
+                        <img src="../../Obrazy/CSS3/21/1.jpg" alt="gr_1"/>
+                        <p>Gradient to pojęcie stosowane w grafice komputerowej i odnoszące się do obszaru, w którym następuje pyłynne przejście minimum dwóch kolorów z jedego do drugiego.</p>
+                        <p>Język CSS3 umożliwia tworzenie gradientów <b>liniowych</b> lub też <b>promienistych</b> wraz z ustaleniem takich jego atrybutów jak:</p>
+                        <ul class="bottom_ul">
+                            <li>ilość i rodzaj kolorów</li>
+                            <li>rozpoczęcie przejścia (kierunek&#8260;kąt)</li>
+                            <li>powtarzalność sekwencji przejścia</li>
+                            <li>szerokość występowania danego koloru w przejściu</li>
+                        </ul>
+                        <p>Zobaczmy więc jak to wygląda w praktyce:</p>
+                     </div>
+                    
+                    <section>
+                        <h4>Gradient liniowy</h4>
+                        
+                        <p>Gradient liniowy tworzymy przez nadanie zanej nam już właściwości <b>backgorund</b> wasności <b>linear-gradient (<i>kierunek&#8260;kąt rozejścia koloru</i>, kolor1 szerokość1, kolor2 szerokość2, ... );</b></p>                        
+                        <p>Kierunek rozejścia koloru możemy zdefiniować następująco:</p>
+                        <ul class="bottom_ul">
+                            <li><b>top</b> - z góry do dołu (180deg)</li>
+                            <li><b>bottom</b> - z dołu do góry (0deg)</li>
+                            <li><b>left</b> - z lewej do prawej (90deg)</li>
+                            <li><b>right</b> - z prawej do lewej(270deg)</li>
+                            <li><b>top left</b> - z górnego lewego rogu do dolnego prawego, itd.</li>
+                            <li><b>top right</b></li>
+                            <li><b>bottom left</b></li>
+                            <li><b>bottom right</b></li>
+                        </ul>
+                        <p>Podobny efekt otrzymamy stosując do określenia kiedynku stopnie w postaci np. <b>45deg</b>.</p>
+                        
+                        <p>Kolory możemy wprowadzać w taki sam sposób jak przy wartości <b>color:</b>, czyli poprzez nazwę, rgb lub wartość heksadacymalną. Ilość umieszczonych w gradiencie kolorów może być dowolna.</p>
+                        <p>Szerokość koloru może być determinowana przez piksele lub wartosć procentową.</p>
+                        <img src="../../Obrazy/cSS3/21/1.png" alt="gr_2"/>
+                        <p>Nie każda przeglądarka odczytuje gradinet w ten sam sposób, więc zaleca się stosowanie <b>dodatkowych przedrostków</b> dla każdej z osobna pokazanych wyżej.</p>
+                        <p>Oto wynik:</p>
+                        <img src="../../Obrazy/cSS3/21/2.png" alt="gr_3"/>
+                    </section>
+                       
+                    <section>
+                        <h4>Gradient promienisty</h4>
+                        
+                        <p>Gradient promienisty tworzymy przez nadanie właściwości <b>backgorund</b> wasności <b>radial-gradient (<i>sposób  rozejścia koloru</i>, kolor1, kolor2, ... );</b></p>                        
+                        <p>Kierunek rozejścia koloru możemy zdefiniować przez:</p>
+                        <ul class="bottom_ul">
+                            <li><b>circle</b> - rozchodzenie kuliste - pierwsza wartość znajduje się najbliżej środka koła</li>
+                            <li><b>elipse</b> - rozchodzenie eliptyczn - podanie dwóch promieni</li>
+                        </ul>
+                        <p>W tym przypadku możemy przenieść wektorowo środek naszego gradientu przez wartość podaną przed słowem circle lub eclipse.</p>
+                        <img src="../../Obrazy/cSS3/21/3.png" alt="gr_3"/>
+                    </section>
+                       
+                    <section>
+                        <h4>Gradient powtarzający się</h4>
+                        
+                        <p>Zarówno gradient promienisty jaki i gradient liniowy możemy powielać przez dodanie do wcześniejszej składni przedrostka <b>reapiting-</b>. Sprawi to, że sekwencja zostanie powtórzona.</p> 
+                        <p>Zdefiniowanie:</p>
+                        <img src="../../Obrazy/cSS3/21/4.png" alt="gr_4"/>   
+                        <p>Wynik:</p>
+                        <img src="../../Obrazy/cSS3/21/5.png" alt="gr_5"/>                    
+                    </section> 
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

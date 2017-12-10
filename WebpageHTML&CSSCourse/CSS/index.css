@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../Obrazy/4.jpg);
+    background-attachment:fixed;
+    background-position:bottom;
+    font-family:'Glegoo', sans-serif;
+    font-size: 12px;
+}
+
+#content{
+    width:960px;
+    margin:0 auto;
+}
+
+header, #slider, #left, #right, footer{
+    background-color:white;
+    border-radius: 4px;
+    margin-bottom:20px;
+}
+
+header{
+    height: 150px;
+    position: relative;
+    margin-top: 10px;
+}
+
+header img{
+    height: 78px;
+    width:78px;
+    top:10px;
+    left:20px;
+    position: absolute;
+}
+
+header p{
+    text-align: center;
+    position: absolute;
+    top:20px;
+    right:250px;
+    font-family:verdana;
+    font-size: 34px;
+    font-weight: bolder;
+    color:#66b274;
+}
+
+header #menu{
+    position:absolute;
+    bottom:20px;
+    left:30px;
+    right:30px;
+}
+
+header ul{
+    margin:30 80 30 80px;
+}
+
+header li, footer li{
+    display: inline;
+}
+
+header a, footer a{
+    display:inline-block;
+    padding:5px;
+    color:#66b274;
+    width:200px;
+    text-align: center;
+    height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    font-weight:bold;
+}
+
+#left p, #right p{
+    color:#66b274;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+header a:hover{   
+    animation-fill-mode:forwards;
+    background-color:rgb(42,103,124);
+    color:white;
+    font-weight:bold;
+}
+
+#slider{
+    height: 200px;
+}
+
+
+
+#left, #right{
+    width:467.5px;
+    height:400px;
+    float:left;
+    position:relative;
+}
+
+#right{
+    margin-left:25px;
+}
+
+#left ul, #right ul{
+    position: absolute;
+    padding:15px;
+    padding-left:60px;
+}
+
+footer{
+    clear:both;
+    position:relative;
+    height:50px;
+    margin-bottom: 10px;
+}
+
+footer ul{
+    position: absolute;
+    top:9px;
+    bottom: 12px;
+    left:30px;
+}
+
+#cop{
+    position: absolute;
+    bottom:3px;
+    right:3px;
+    color:#66b274;
+}

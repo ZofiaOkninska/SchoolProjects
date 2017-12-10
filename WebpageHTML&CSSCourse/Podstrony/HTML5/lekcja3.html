@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 3 - Podstawowa struktura dokumentu</h1>
+                <article>
+                    <div class="intro">
+                        <p>Zobaczmy więc w jaki sposób będzą ułożone postawowe, konieczne elementy na stronie. Przy pisaniu kodu nalezy pamiętać o stosowaniu zanku tabulacji dla zwiększenia czytelności dokumnetu.</p>
+                        <img src="../../Obrazy/HTML/3/1.png" alt="podstawowa_struktura"/>
+                        <p>Przeanalizujmy pokolei nasz kod...</p>
+                    </div>
+                        
+                    <section>    
+                        <h4>&lt;!DOCTYPE html&gt; i &lt;html&gt;&lt;&#8725;html&gt;</h4>
+                        <p>Tak jak wspomnieliśmy w pierwszej lekcji <b>&lt;!DOCTYPE html&gt;</b> informuje przeglądarkę że ma doczynienia z dokumentem html. W znaczniku <b>&lt;html&gt;&lt;&#8725;html&gt;</b> natomiast znajduje się cała zawartość kodu.</p>
+                    </section>
+                        
+                    <section>
+                        <h4>&lt;head&gt;&lt;&#8725;head&gt;</h4>
+                        
+                        <p>Innaczej "głowa dokumentu". Zawiera podstawowe informacje na temat dokumentu html takie jak: jego nazwa, sposób kodowania, informacje o autorze, słowa kluczowe, zewnętrzne arkusze do niego dołączone oraz wiele innych.</p>
+                        <img src="../../Obrazy/HTML/3/3.png" alt="head"/>
+                    
+                        <section>  
+                            <p class="acapit">&lt;tile&gt;&lt;&#8725;title&gt;</p>
+                                <p>Umieszczamy w tych znacznikach tytuł naszej strony. Będzie widoczny:</p>
+
+                                <ul>
+                                    <li>Na pasku narzędzi przeglądarki</li>
+                                    <li>Gdy dodamy stornę do ulubionych</li>
+                                    <li>W wynikach wyszukiwania strony</li>
+                                </ul>
+                        </section>
+
+                         <section>            
+                            <p class="acapit">&lt;meta ... &#8725;&gt;</p>
+                                <p>Jest to znacznik pojedynczy pełniący różne fukcje w zależnosci od użytych w nim <b>atrybutów</b>. Atrybuty tworzymy poprzez dane słowo go określające, znak równości oraz umieszczoną w cudzysłowiach wartość.</p>
+
+                                <ul class="ul_img">
+                                    <li><img src="../../Obrazy/HTML/3/4.png" alt="meta_1"/>Ten zancznik meta z atrybutem <b>charset="UTF-8"</b> odpowiada za kodowanie treści dokumentu html w UTF-8 (system kodowania Unicode), czyli "rozszerzeniu" kodu ASCII. <br/>Jest on w stanie użyć do zaszyfrowania jednego znaku od 8 do 32 bitów, podczas gdy ASCII wykożystuje ich tylko 7. Komputerowy zestaw znaków Unicode ma w zamierzeniu obejmować wszystkie pisma używane na świecie.</li>
+                                    
+                                    <li><img src="../../Obrazy/HTML/3/5.png" alt="meta_2"/>Kolejne meta jakie poznamy będą zawierały już po dwa atrybuty: <b>name</b>, oraz <b>content</b>. "Name" będzie określało typ zawartosci meta znacznika, natomiast "content" tą właśnie zawartość. <br/>Tak więc atrybut <b>name="author"</b> odnosi się do autora danej strony, natomiast w atrybucie content umieścimy jego imię i nazwisko, np: <b>content="Jan Kowalski"</b>.</li>
+                                    
+                                    <li><img src="../../Obrazy/HTML/3/6.png" alt="meta_3"/>W tym znaczniku meta name odnosi się do słów kluczowych występujących na stronie poprzez <b>name="keywords"</b>, natomiast w zawartości umieścimy po przecinkach kolejne wyrazy-klucze, np: <b>content="kurs, html5, css3"</b>.</li>
+                                </ul>
+                                
+                                <p>Inne znaczniki meta:</p>
+                                
+                                <table class="table_with_margin_top" border="1">
+                                    <tr>
+                                        <td><b>name="robots"</b></td>
+                                        <td>
+                                            <ul>
+                                                <li><b>content="follow"</b> - DOMYŚLNA - śledzenie strony</li>
+                                                <li><b>content="index"</b> - indeksowanie strony</li>
+                                                <li><b>content="noindex, nofollow"</b> - storna nie indeksowana (teoretycznie nie znajdziemy jej w wyszukiwarce) oraz blokująca podążanie za odnośnikami</li>
+                                            </ul>
+                                        </td>
+                                        <td>Polecenie określa sposób zachowania się robotów-indekserów, czyli specjalnych programów zbierających informacje o stronach w Internecie, wykorzystywane później przez wyszukiwarki. Dodaje się go zwykle tylko, gdy chcemy zablokować dostęp robotowi do wybranych stron.<br/><br/><b>Indeksowanie</b> strony polega na gromadzeniu danych o występujących w niej wyrazach i innych treściach.<br/> <b>Śledzenie</b> stron to przechodzenie do podstron, do których odnoszą się odsyłacze w dokumencie.</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><b>name="generator"</b></td>
+                                        <td><b>content="Notepad++"</b></td>
+                                        <td>Określa program wykożstany do edycji dokumentu. Na przykład Notepad++.</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><b>name="desryption"</b></td>
+                                        <td><b>content="<i>opis</i>"</b></td>
+                                        <td>Opis.</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><b>name="copyright"</b></td>
+                                        <td><b>content="<i>copyright</i>"</b></td>
+                                        <td>Copyright.</td>
+                                    </tr>
+                                </table>
+                         </section>
+                         
+                         <section>  
+                            <p class="acapit">&lt;link rel="..."  href="..."  type="..." &#8725;&gt;</p>
+                                <p>Tutaj znajdują się wszystkie zawnęrzne linki do przeróżnych akruszy takich jak np:</p>
+
+                                <ul>
+                                    <li>CSS</li>
+                                    <li>Java Script</li>
+                                    <li>Google Fonts</li>
+                                </ul>
+                                
+                                <table border="1" class="table_with_margin_top">
+                                    <tr>
+                                        <td><b>rel="..."</b></td>
+                                        <td>Określa <b>typ relacji</b> pomiędzy obecnym dokuentem html, a podpiętym dokumentem&#8725;źródłem. Może przyjmować takie wartości jak:
+                                            <ul>
+                                                <li><b>stylesheet</b> - importuje arkusz stylów</li>
+                                                <li><b>icon</b> - imprtuje ikonę widoczną dla danego dokumentu (tzw. <b>favicon</b>)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>href="..."</b></td>
+                                        <td>Umieszczamy w nim konkretny link do arkusza.</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><b>type="..."</b></td>
+                                        <td>Określa typ dołączonego źródła, np plik tekstowy&#8725;arkusz stylów: <b>type="txt&#8725;css"</b></td>
+                                    </tr>
+                                </table>
+                        </section>
+                    </section>
+                    
+                    <section class="last">
+                        <h4>&lt;body&gt; &lt;&#8725;body&gt;</h4>
+                          <p>Body, czyli innaczej "ciało" dokumentu html zawiera w sobie wszystkie elementy, które mają pojawić się na stronie. Na początku poznajmy podstawowe struktury, takie jak nagłówki i "pojemniki" na tekst.</p>
+                            
+                          <div class="explanation_1">
+                            <div class="first">
+                                 <img src="../../Obrazy/HTML/3/7.png" alt="body_1"/>
+                            </div>
+
+                            <div class="second">
+                                 <img src="../../Obrazy/HTML/3/8.png" alt="body_2"/>
+                            </div>
+                               <div class="third"></div>
+                          </div>
+                            
+                          <table border="1">
+                              <tr>
+                                 <td style="width:150px;"><b>&lt;h1&gt;&lt;&#8725;h1&gt;</b> do <b>&lt;h6&gt;&lt;&#8725;h6&gt;</b></td>
+                                 <td>Określa nagłówki na stronie, gdzie &lt;h1&gt; to największy nagłówek, a &lt;h6&gt; najmniejszy.</td>
+                              </tr>
+
+                             <tr>
+                                <td><b>&lt;p&gt;&lt;&#8725;p&gt;</b></td>
+                                <td>Tu umieszczamy tekst, który ma być widoczny na stronie. Gdyby był on już wcześniej sformatowany, przeglądarka zignorowała by to i na stronie nic nie uległo by zmianie.</td>
+                             </tr>
+                         </table>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

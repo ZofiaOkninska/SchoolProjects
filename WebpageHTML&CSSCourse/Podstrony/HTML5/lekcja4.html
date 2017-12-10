@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 4 - Formatowanie tekstu</h1>
+                <article>
+                    <div class="intro">
+                        <p>Zajmijmy się podstawowymi znacnzikami, dzięki którym będziemy mogli formatować tekst na różne sposoby:</p>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;sup&gt;&lt;&#8725;sup&gt; oraz &lt;sub&gt;&lt;&#8725;sub&gt;</h4>
+                    </section>
+                    
+                    <div class="explanation_1">
+                         <div class="first">
+                               <p class="center"><b>&lt;sup&gt;&lt;&#8725;sup&gt;</b> Tworzy indeks górny w tekście</p>
+                               <img src="../../Obrazy/HTML/4/1.png" alt="sup_1"/>
+                               <img src="../../Obrazy/HTML/4/2.png" alt="sup_2"/>     
+                         </div>
+                         <div class="second">
+                               <p class="center"><b>&lt;sub&gt;&lt;&#8725;sub&gt;</b> Tworzy indeks dolny w tekście</p>
+                               <img src="../../Obrazy/HTML/4/3.png" alt="sub_1"/>
+                               <img src="../../Obrazy/HTML/4/4.png" alt="sub_2"/>
+                         </div>
+                         <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;small&gt;&lt;&#8725;small&gt;</h4>
+                        <p>Small zmiejsza czcionkę tekstu. Wpisując powyższy znacznik jeden wewnątrz drugiego &lt;small&gt;&lt;small&gt;&lt;&#8725;small&gt;&lt;&#8725;small&gt;, można zmniejszyć rozmiar tekstu o kilka wielkości.</p>
+                    </section>
+                    
+                    <div class="explanation_2">
+                         <div class="first">
+                             <img class="explanation_2_img_margin_left" src="../../Obrazy/HTML/4/5.png" alt="small_1"/>
+                        </div>
+                        <div class="second">
+                             <img src="../../Obrazy/HTML/4/6.png" alt="small_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;em&gt;&lt;&#8725;em&gt; oraz &lt;strong&gt;&lt;&#8725;strong&gt;</h4>
+                        <p>Em oraz strong odnoszą się do istotnych części tekstu</p>
+                    </section>
+                    
+                    <div class="explanation_2">
+                        <div class="first">
+                            <h5 class="center">&lt;em&gt;&lt;&#8725;em&gt;</h5>
+
+                            <p>To tekst <b>ważny</b>, innaczej: zaakcentowany. Przypomina swoim wygłądem kursywę, lecz nią nie jest bezpośrednio.</p>
+                            <img src="../../Obrazy/HTML/4/7.png" alt="em_strong_1"/>
+                        </div>
+                        <div class="second">
+                            <h5 class="center">&lt;strong&gt;&lt;&#8725;strong&gt;</h5>
+                            
+                            <p>Silnie wyróżnia fragment tekstu. Przypomina swoim wygłądem czcionkę pogrubioną, lecz róznież nie jest nią ostatecznie.</p>
+                            <img src="../../Obrazy/HTML/4/8.png" alt="em_strong_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;blockquote&gt;&lt;&#8725;blockquote&gt;</h4>
+                        
+                        <p>W tej sekcji umieszczany jest tekst, będący cytatem bądź fragmentem z jakiegoś źródła. Pochodzenie tekstu definiujemy poprzez poprzez atrybut <b>cite</b> w którym umieszczamy link źródłowy.</p>
+                        <img src="../../Obrazy/HTML/4/9.png" alt="em_strong_1"/>
+                        <img src="../../Obrazy/HTML/4/10.png" alt="em_strong_2"/>
+                    </section>
+                    
+                    <section>
+                        <h4>&lt;pre&gt;&lt;&#8725;pre&gt;</h4>
+                        
+                        <p>W przeciwieństie do znacznika &lt;p&gt;&lt;&#8725;p&gt;, tekst preformatowany może zawierać znaki w postaci spacji, enterów czy tabulatorów i zostaną one wyświetlone w przeglądarce.</p>
+                    </section>
+                    
+                    <div class="explanation_2">
+                        <div class="first">
+                            <img class="explanation_2_img_margin_left" src="../../Obrazy/HTML/4/11.png" alt="pre_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/HTML/4/12.png" alt="pre_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                        
+                    <section>
+                        <h4>&lt;code&gt;&lt;&#8725;code&gt;</h4>                     
+                        <p>W tym znaczniku umieszczamy fragmenty kodu komputerowego. Jego założeniem jest wyświetlanie czcionki o stałej szerokości.</p>  
+                    </section>
+                    
+                    <div class="explanation_2">
+                        <div class="first">
+                            <img src="../../Obrazy/HTML/4/14.png" alt="code_1"/>
+                        </div>
+
+                        <div class="second">
+                            <img src="../../Obrazy/HTML/4/13.png" alt="code_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;cite&gt;&lt;&#8725;cite&gt; oraz &lt;q&gt;&lt;&#8725;q&gt;</h4>
+                        <p>Znaczniki &lt;cite&gt; oraz &lt;q&gt; służą do cytowania określonych fragmentów tekstu.</p>  
+                    </section>
+                    
+                    <div class="explanation_2">
+                        <div class="first">
+                            <h5 class="center">&lt;cite&gt;&lt;&#8725;cite&gt;</h5>
+
+                            <p>Za pomocą cite umieszczamy tytuły na stronie. Nie dodaje on cudzysłowów.</p>
+                            <img src="../../Obrazy/HTML/4/15.png" alt="cite_1"/>
+                            <img src="../../Obrazy/HTML/4/16.png" alt="cite_2"/>
+                        </div>
+                        <div class="second">
+                            <h5 class="center">&lt;strong&gt;&lt;&#8725;strong&gt;</h5>
+                            
+                            <p>Znacznik q dokłada jedynie sam cudzysłów do tekstu który sie w nim znajduje.</p>
+                            <img src="../../Obrazy/HTML/4/17.png" alt="q_1"/>
+                            <img src="../../Obrazy/HTML/4/18.png" alt="q_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;i&gt;&lt;&#8725;i&gt;</h4>      
+                        <p>Tekst zostaje napisany kursywą.</p>   
+                    </section>
+                    
+                    <div class="explanation_2">
+                        <div class="first">
+                             <img src="../../Obrazy/HTML/4/19.png" alt="i_1"/>
+                        </div>
+                        <div class="second">
+                             <img src="../../Obrazy/HTML/4/20.png" alt="i_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;b&gt;&lt;&#8725;b&gt;</h4>
+                        
+                        <p>Za pomocą &lt;b&gt; od słowa bold tekst zostaje pogrubiony.</p>
+                    </section>
+                                    
+                    <div class="explanation_2">
+                        <div class="first">
+                                <img src="../../Obrazy/HTML/4/21.png" alt="b_1"/>
+                        </div>
+
+                        <div class="second">
+                                <img src="../../Obrazy/HTML/4/22.png" alt="b_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;del&gt;&lt;&#8725;del&gt; oraz &lt;ins&gt;&lt;&#8725;ins&gt;</h4>
+                        
+                        <p>Znaczniki &lt;del&gt; raz &lt;ins&gt; wprowadają do tekstu linie poziome odpowiednio wzdłuż tekstu i tuż pod nim.</p>
+                    </section>
+                    
+                    <div class="explanation_2">
+                        <div class="first">
+                            <h5 class="center">&lt;del&gt;&lt;&#8725;del&gt;</h5>
+                            
+                            <p>Przekreśla dany tekst.</p>
+                            <img src="../../Obrazy/HTML/4/23.png" alt="del_1"/>
+                            <img src="../../Obrazy/HTML/4/24.png" alt="del_2"/>
+                        </div>
+
+                        <div class="second">
+                            <h5 class="center">&lt;ins&gt;&lt;&#8725;ins&gt;</h5>
+                            
+                             <p>Powoduje podkreślenie zawartości.</p>
+                            <img src="../../Obrazy/HTML/4/25.png" alt="ins_1"/>
+                            <img src="../../Obrazy/HTML/4/26.png" alt="ins_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <section>
+                        <h4>&lt;br&#8725;&gt; oraz &lt;hr&#8725;&gt;</h4>
+                        
+                        <p>Zanczniki &lt;br&#8725;&gt; oraz &lt;hr&#8725;&gt; służą do odzielenia części tekstu od siebie.</p>
+                    </section>
+                          
+                    <div class="explanation_2">
+                        <div class="first">
+                            <h5 class="center">&lt;br&#8725;&gt;</h5>
+                                 
+                            <p>Przerzuca dalszą część tekstu do kolejnej linii. Działa jak enter.</p>
+                        </div>
+                        <div class="second">
+                            <h5 class="center">&lt;hr&#8725;&gt;</h5>
+                                 
+                            <p>Tworzy poziomą linię na długości dokumnetu oddzielając tym samym elementy.</p>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                        
+                    <section class="last">  
+                        <img src="../../Obrazy/HTML/4/27.png" alt="br_hr_1"/>
+                        <img src="../../Obrazy/HTML/4/28.png" alt="br_hr_2"/>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

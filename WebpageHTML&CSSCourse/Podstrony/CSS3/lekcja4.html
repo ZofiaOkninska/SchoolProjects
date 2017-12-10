@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 4 - Strona o stałej szerokości, id i class</h1>
+               <article>
+                     <div class="intro">
+                        <h2>Jeszcze nieco o pojemnikach ...</h2>
+                        
+                        <p>W poprzedniej lekcji wspomnieliśmy o budowie każdego z elementów na stronie, oraz o tym jak należy obliczać ich szerokość i wysokość. Teraz wspomnimy o nowych typach takich pojemników. Mogą one zawierać w sobie inne elementy, a te w sobie jeszcze kolejne itd. Tworzy nam się w ten sposób pewna hierarchia tych elementów. Gdy omówimy już w jaki sposób wykożystywać różne typy kontenetów, przygłądniemy się jak je przemieszczać na stronie i ustawiać w odpowiedniej kolejności.<br/> Do dzieła!</p>
+                     </div>
+                    
+                    <section>
+                        <h4>Poznajmy diva</h4>
+                    </section>
+                       
+                    <div class="explanation_1">
+                        <div class="first">
+                            <p><b>Divem</b> będziemy określać każdy nowo utworzony element na stronie zawierający się z zancznikach <b>&lt;div&gt; &lt;&#8725;div&gt;</b> w HTML'u. Takich elementów może być bardzo wiele na stronie. Moga one zawierać się w sobie, czy też posiadać w swoim środku inne zanczniki.</p>
+                        </div>
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/4/1.png" alt="div"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                       
+                    <section>
+                        <p>Jak na razie nasz nowo utowrzony element nie będzie wyświetlony, gdyż brakuje mu ustawionej szerokości i wsokości. Nie posiada także żadnego ustawionego obramowania, czy tła. Możemy to jednak zmienić przez kod CSS.</p>
+                        <p>Aby móc odwołać się do takiego elementu jak div, potrzebujemy mu nadać jakąś charakterystyczna nazwę aby dla jednego konkretnego kontenera ustawić np. tło na zielone.</p>
+                        <p>dokonamy tego za pomocą <b>specjalnego identyfikatora</b> ozanczonego skrótowo jako parametr <b>id="..."</b>.</p>
+                    </section>
+                       
+                    <section>
+                        <h4>ID</h4>
+                        
+                        <p>Skoro wiemy już jak utworzyć diva o określonym identyfikatorze, zobaczmy w jaki sposób zaimplementować takiego delikwenta w kodzie CSS.</p>
+                    </section>
+                       
+                    <div class="explanation_1">
+                        <div class="first">
+                            <p class="center">Oto ustawiona wartość w kodzie HTML:</p>
+                            <img src="../../Obrazy/CSS3/4/2.png" alt="id_1"/>
+                        </div>
+                        <div class="second">
+                            <p class="center">Oraz implementacja w CSS:</p>
+                            <img src="../../Obrazy/CSS3/4/3.png" alt="id_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <p class="center">Do slektora id odnosimy się za pomocą znaku <b>#</b> i nazwy elemnetu.</p>
+                    <img style="margin-bottom:10px;" src="../../Obrazy/CSS3/4/6.png" alt="id_3"/>
+                     
+                    <section>
+                        <h4>Czym jest CLASS?</h4>
+                        
+                        <p>Udało nam się już stworzyć pojemnik o określonych warotościach. Jednak na stronie rośnie nam znacznie liczba elementów i potrzebujemy również dla kilku pozostałych ustawić takie same wymiary i tło. Czy musimy tworzyć osobne identyfikatory i każdy odzielnie implementować w CSS? Otóż nie. Wystarczy, że nadamy naszemu div'owi tak zwaną<b>klasę</b> zamiast identyfikatora. Zapisujemy ją jako <b>class="..."</b>. Zobaczmy jak to wygląda w kodzie.</p>
+                    </section>
+                       
+                    <div class="explanation_1">
+                        <div class="first">
+                            <p class="center">Ustawiona wartość w kodzie HTML:</p>
+                            <img src="../../Obrazy/CSS3/4/4.png" alt="class_1"/>
+                        </div>
+                        <div class="second">
+                            <p class="center">Oraz implementacja w CSS:</p>
+                            <img src="../../Obrazy/CSS3/4/5.png" alt="class_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                       
+                    <p class="center">Jak widzimy do slektora klasy odwołujemy się za pomocą <b>kropki</b> i nazwy elemnetu.</p>
+                    <img style="margin-bottom:10px;" src="../../Obrazy/CSS3/4/7.png" alt="class_3"/>
+                    
+                    <section>
+                        <h4>Strona o stałej szerokości</h4>
+                        
+                        <p>Poznajmy teraz znaczniki kontenerowe w HTML które umożliwiają odwołanie się do określonych części strony jedynie poprzez swoją nazwę w CSS. Również jak divy są pojemnikami mającymi na celu przechowywanie innych elementów na stronie.</p>
+                        <ul class="bottom_ul">
+                            <li><b>&lt;main&gt;</b> - zawiera się w nim cała treść dokumentu html</li>
+                            <li><b>&lt;header&gt;</b> - header dokumentu, tu znajdują się standardowo takie elementy jak główna nawigacja, logo, nazwa strony itd.</li>
+                            <li><b>&lt;footer&gt;</b> - stopka dokumentu</li>
+                            <li><b>&lt;nav&gt;</b> - nawigacja</li>
+                            <li><b>&lt;article&gt;</b> - artykuł, odrębna część dokumentu w założeniu mogąca byc poźniej udostępniona jako osobna całość</li>
+                            <li><b>&lt;section&gt;</b> - sekcja artykułu, powinna zawierać nagłówek</li>
+                            <li><b>&lt;aside&gt;</b> - sekcja poboczna artykułu, znajdują się tu najczęściej informacje poboczne, np. cytaty</li>
+                            <li><b>&lt;figure&gt;</b> - kontener na obrazek z podpisem</li>
+                            <li><b>&lt;figcaption&gt;</b> - podpis obrazka w &lt;figure&gt;</li>
+                        </ul>
+                        <p>Znając te wsztstkie informacje, jesteśmy w stanie stworzyć stronę o stałej szerokości. Uznajmy obecenie, że domyślą wartością szerokości zancznika &lt;main&gt; dla naszych stron będzie 960px.</p>
+                        <p>Czas przyjżeć się temu, w jaki sposób wymusić na elementach zmianę ich podstawowego położenia względem siebie na stronie.</p>
+                    </section>
+                    
+                    <section>
+                        <h4>display:</h4>
+                        
+                        <p>Te dwa nowe elektory odpowiadają za sposób wyświetlania elemantów na stronie. W lekcji o wstawianiu grafiki na strone w kursie HTML5 wspomnieliśmy o tym, iż zamacznik img jest <b>liniowym</b>, to zanczy, że kolejne następujące po sobie img będą się wyświetlać tuż koło siebie w taj samej linii. Elementy liniowe są reprezentowane przez wartość <b>inline</b> dla display i jest to <b>wartośc domyślna</b>. <br/>Kolejne istotne właściwości <b>display</b> to:</p>
+                        <ul>
+                            <li><b>block</b> - element wyświetlany jest jako elemet blokowy, np. zacznik <i>p</i> w HTML'u; jeden pod drugim</li>
+                            <li><b>inline-block</b>  - element liniowo-blokowy; kolejne elenenty są wyświetlane obok siebie, natomiast ich zawartość jest blokowa</li>
+                        </ul>
+                    </section>
+                       
+                    <section>
+                        <h4>float:...; i clear:both;</h4>
+                        
+                        <p>Jest to zancznik, który odpowiada za tzw. "opływanie się" elementów. Przyjmuje on dwie wartości <b>left</b> oraz <b>right</b>.</p>
+                        <p>Jeśli chcemy aby jakiś div znalazł się po prawej stronie drugiego diva, użyjemy wartości <b>float:right</b> ale tego pierwszego aby mógł zaleźć się po drugiej stronie.</p>
+                    </section>
+                    
+                    <div class="explanation_1">
+                        <div class="first">
+                            <img src="../../Obrazy/CSS3/4/8.png" alt="class_1"/>
+                        </div>
+                        <div class="second">
+                            <img src="../../Obrazy/CSS3/4/9.png" alt="class_2"/>
+                        </div>
+                        <div class="third"></div>
+                    </div>
+                    
+                    <img style="margin-bottom:10px;" src="../../Obrazy/CSS3/4/10.png" alt="class_3"/>
+                    
+                    <section>
+                        <p>Ostatią rzeczą, którą należy pamiętać z tej lekcji jest to, aby na kolejnym elemencie znajdującym się pod drugim divem (najlepiej utwożyc do tego celu osobny trzeci div) ustawić własność <b>clear:both;</b> która redukuje ustawienia float i tym samym pomaga w poprawnym ułożeniu elementów.</p>
+                    </section>
+                </article>
+            </div>
+ <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

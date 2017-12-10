@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 1 - CSS3 - wprowadzenie</h1>
+                <article>
+                    <div class="intro">
+                        <h2>Czym są arkusze stylów?</h2>
+
+                        <p>Arkusze stylów to zaimplementowane w kodzie CSS <b>instrukcje edycji wyglądu</b> tego, co znajduje się na naszej stronie. Możliowści konfiguracji poszeczególnych elementów w kodzie CSS3 są nieporówynywalnie lepsze od tych, które jak na razie oferuje nam język HTML5. O wiele bardziej dokładne i precyzyjne, pozwalają na znaczną poprawę wizualnej strony witryny. Dla tego też do edycji wyglądu HTML5 zaleca się używanie wyłącznie jego, chyba że taka możliwość nie istnieje, lub też użycie samego HTML5 jest akurat wygodniejsze. Są to jednak bardzo sporadyczne wypadki.</p>
+                        <p>Arkusze stylów określają więc w jaki sposób poszczególne znaczniki na stronie będą wykożystywane.</p>
+                    </div>
+                     
+                    <section>
+                        <h4>Reguła stylu</h4>
+                        
+                        <p>Kożystanie z arkusza stylów odbywa się poprzez użycie zawartych w nim <b>reguł stylów</b>. To one formatują określone elementy na strone w odpowiedni sposób. Każda reguła stylu składa się z:</p>
+                        <ul>
+                            <li><b>selektora</b> - określającego odwołanie do konkretnego obiektu HTML5</li>
+                            <li><b>deklaracji stylu</b> - zawierającej się w "wąsach" konktetne informacje o formatowaniu:
+                                <ul>
+                                    <li><b>właściwości</b> - to konkretna nazwa typu formatowania</li>
+                                    <li><b>wartości</b> - występująca po dwukropku i zakończona średnikiem warość dla danego typu fomatowania</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <img src="../../Obrazy/CSS3/1/1.png" alt="regula"/>
+                    </section>
+                    
+                    <section>
+                        <h4>Sposoby umieszczania arkuszy stylów na stronie i ich hierarchia</h4>
+                        
+                        <p>Istnieją trzy sposoby umieszczania (podpinania) arkuszy stylów na stronie. Omówmy każdy z nich z osobna:</p>
+                    </section>
+                        
+                    <section> 
+                        <p class="acapit">Zwenętrzny arkusz stylów</p>
+                           
+                        <p>Służy do podpinania arkusza, który znajduje się poza obrębem naszej strony. Jest osobnym dokumentem o rozszerzeniu .css.</p>
+                        <p>Aby dokonać podpięcia używamy już wcześniej poznanego w kursie języka HMTL5 znacznika <b>&lt;link rel="..."  href="..."  type="..." &#8725;&gt;</b>.</p>
+                        <img src="../../Obrazy/CSS3/1/2.png" alt="ar_1"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">Wewnętrzny arkusz stylów</p>
+                           
+                        <p>Wewnętrzny arkusz stylów to umieszczenie w znacziku &lt;head&gt;&lt;&#8725;head&gt; kolejnego zancznika <b>&lt;style&gt;&lt;&#8725;style&gt;</b> i w nim reguł stylów. Ma on wyższą hiererchię ważnosći niż zwenętrzny arkusz.</p>
+                        <img src="../../Obrazy/CSS3/1/3.png" alt="ar_2"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">Lokalny arkusz stylów</p>
+                           
+                        <p>Lokalny arkusz stylów ma najwyższą hirerchię ze wszystkich trzech sposobów umieszczania formatowania CSS3 na stronie. Zostanie wykonany w kolejności jako pierwszy.</p>
+                        <p>Stosuje się go przy konkretynym znaczniku HTML5 jako atrybut <b>style="..."</b></p>
+                        <img src="../../Obrazy/CSS3/1/4.png" alt="ar_3"/>
+                    </section>
+                    
+                    <section>
+                        <h4>Ogólna hierarchia elementów na stronie</h4>
+                        
+                        <p>Innaczej mówiąc jes to główna cecha języka CSS, który sam po rozwinięciu swojej nawzy sugeruje "kaskadowe arkusze stylów". Elementy o najwyższej hierarchi są wykonywane przed tymi, które leżą w niej niżej. Zostają nadpisywane na niższy punkt w liście.</p>
+                        <ol>
+                            <li>Styl lokalny</li>
+                            <li>Rozciąganie stylu &lt;span&gt;</li>
+                            <li>Wydzielone bloki &lt;div&gt;</li>
+                            <li>Wewnętrzny arkusz stylów</li>
+                            <li>Zewnętrzny arkusz stylów</li>
+                            <li>Import arkusza stylów</li>
+                            <li>Domyślne ustawienia przeglądarki</li>
+                        </ol>
+                    </section>
+                </article>
+            </div>
+
+            <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kurs HTML5 &amp; CSS3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Zofia Oknińska"/>
+        <meta name="keywords" content="kurs html5, kurs css3, html, css"/>
+        <link rel="stylesheet" href="../../CSS/kurs.css" type="text/css"/>
+        <link href='http://fonts.googleapis.com/css?family=Glegoo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <img src="../../Obrazy/logo.jpg" alt="logo"/>
+                <p>&lt;&#8260;Kurs HTML5 &amp; CSS3&gt;</p>
+
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../index.html">Strona Główna</a></li>
+                        <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                        <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                        <li><a href="../../Podstrony/Informacje.html">Informacje</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="left">
+               <h1>Lekcja 9 - Fromularze</h1>
+               <article>
+                    <div class="intro">
+                        <h2>Czym są formularze?</h2>
+                        
+                        <p>Formularze to takie elemety na stronie, do których możemy wprowadzać  dane, wrzucać do nich pliki w celu wysłania ich potem na serwer, wypełniać przez nie różnego rodzaju ankiety i tym podobne. Mają one określoną budowę. Składają się z kilku rodzajów elementów wewnętrznych. Zobaczmy jak tworzyć te struktury.</p>
+                     </div>
+                    
+                    <section>
+                        <h4>Znacznik &lt;form&gt;&lt;&#8725;form&gt;</h4>
+                        
+                        <p>W tym znaczniku znajdą się ramy każdego formularza. W swoim środku będzie osobno zawierał takie struktury jak przyciski, czy elementy do wprowadzania danych z odpowiednimi podpisami. Na razie zajmijmy się samą ramąs formularza. Może ona posiadać różne atrybuty:</p>
+                        <ul>
+                            <li><b>action="..."</b> - określa jaka akcja zostanie wykonana po potwierdzeniu formularza przyciskiem "ok"; zwykle ma w sobie zawierać adres odpowiedniego skryptu, który ma się wykonać itp.</li>
+                            <li><b>method="..."</b> - przyjmuje dwie wartości <b>post</b> lub <b>get</b>, gdzie ta druga opcja jest wartością domyślną; określa w jaki sposób wysyłać dane wproadzone do formularza</li>
+                            <li><b>autocomplete="..."</b> - przyjmuje dwie wartości <b>on</b> lub <b>off</b>, gdzie ta pierwsza jest wartością domyślną; jest to zapamętywanie przeglądarki wpisanych danych takich jak np. hasła</li>
+                            <li><b>novalidate="novalidate"</b> - wyłącza domyślne spawdzanie poprawności wpisywanych danych</li>
+                        </ul>
+                    </section>
+                      
+                    <section>
+                        <h4>"Łącznik" &lt;label&gt;</h4>
+                        
+                        <p>Jego funkcją jest połączenie konkretnego pola input z jego podpisem poprzez zawarcie go w ramach znacznika <b>&lt;label&gt;</b> wraz z tytułem bloku. Dzięki niemu po kliknięciu napisu, przenosimy się w wprawadzania danych w danym mu polu odpowiadającym. Jest to element liniowy. Do jedego zacznika kontenereowego &lt;label&gt; można włożyć jedynie jeden input. O samym inpucie niżej:</p>
+                    </section>
+                       
+                    <section>
+                        <h4>Znacznik &lt;input ... &#8725;&gt;</h4>
+                        
+                        <p>W tym znaczniku pojedynczym umieszczamy odpowiednie elememty interaktywne, do których będą wprowadzane odpowienie wrtości. Umieszczemy go we wnętrzu znacznika &lt;form&gt;&lt;&#8725;form&gt;. Przyjmuje takie atrybuty jak:</p>
+                        <ul class="bottom_ul">
+                            <li><b>type="..."</b> - określa typ elemnetu</li>
+                            <li><b>name="..."</b> - określa nazwę elemetu; widoczna w dersie url po zatwierdzeniu formularza</li>
+                            <li><b>value="..."</b> - określa wartość danego elementu</li>
+                        </ul>
+                        <p>Ze wszystkich tych elementów <b>dwa pierwsze są konieczne do podania</b> by stworzyć pole input. Atrybut <b>value</b> jest istotny dla wykożsytania Java Script oraz dla specyficznego typu pola &lt;input ... &#8725;&gt; o czym przeczytamy dalej.</p>
+                        
+                        <p>Oto najważniejsze typy pól formularzy zdeterminowane atrybutem <b>type="..."</b>:</p>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">type="text"</p>
+                           
+                        <p>Jest to znacznik do którego wprowadzamy dane tekstowe takie jak imię czy nazwisko. Może przyjmowac wcześniej wspomniane <b>value</b>, lcze biędzie ono jedo wartością domyslną.</p>
+                    </section>
+                    
+                     <div class="explanation_1">
+                            <div class="first">
+                                <img src="../../Obrazy/CSS3/11/1.png" alt="t1"/>
+                            </div>
+
+                            <div class="second">
+                                <img src="../../Obrazy/CSS3/11/2.png" alt="t2"/>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                    
+                    <section> 
+                        <p class="acapit">type="submit"</p>
+                           
+                        <p>Jest odpowiednikiem przyciusku zatwierdzającego cały formularz. Przyjmuje <b>value</b>, które jest dla niego UWAGA oznaczeniem napisu na przycisku.</p>
+                    </section>
+                    
+                     <div class="explanation_1">
+                            <div class="first">
+                                <img src="../../Obrazy/CSS3/11/3.png" alt="t3"/>
+                            </div>
+
+                            <div class="second">
+                                <img src="../../Obrazy/CSS3/11/4.png" alt="t4"/>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                    
+                    <section> 
+                        <p class="acapit">type="date"</p>
+                           
+                        <p>Input interaktywny, rozsuwany służący do wprawadzania daty.</p>
+                        <img src="../../Obrazy/CSS3/11/5.png" alt="t5"/>
+                        <img src="../../Obrazy/CSS3/11/6.png" alt="t6"/>
+                    </section>
+                    
+                    <section> 
+                        <p class="acapit">type="password"</p>
+                           
+                        <p>Jak nazwa wskazuje, służy do wproadzania haseł. Wprowadzane znaki są wyświetlane w postaci kropek, lecz nie zapewnia to 100% bezpieczeństwa, gdyż wprowadzana wartość po zatwierdzeniu będzie widoczna na pasku url. Do tego ustawia się dodatkowe opcje.</p>
+                    </section>
+                    
+                     <div class="explanation_2">
+                            <div class="first">
+                                <img src="../../Obrazy/CSS3/11/7.png" alt="t7"/>
+                            </div>
+
+                            <div class="second">
+                                <img src="../../Obrazy/CSS3/11/8.png" alt="t8"/>
+                            </div>
+                            <div class="third"></div>
+                        </div>
+                    
+                    <section>
+                        <h4>Pozoztałe typy &lt;input ... &#8725;&gt;</h4>
+                        
+                        <p>Oto pozostałe typy pól formularzy zdeterminowane atrybutem <b>type="..."</b>:</p>
+                        
+                        <table border="1" class="table_with_margin_top">
+                            <tr>
+                                <td><b>type="..."</b></td>
+                                <td><b>Wykożystanie</b></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>tel</td>
+                                <td><img src="../../Obrazy/CSS3/11/9.png" alt="i1"/>
+                                    <p>Służy do umieszczania nr telefonu</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>email</td>
+                                <td><img src="../../Obrazy/CSS3/11/10.png" alt="i2"/>
+                                    <p>Służy do umieszczania adresu email. Oto przykładowy komunikat po wprowadzeniu błędnych znaków.</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>url</td>
+                               <td><img src="../../Obrazy/CSS3/11/11.png" alt="i3"/>
+                                    <p>Służy do umieszczania adresu url. Oto przykładowy komunikat po wprowadzeniu błędnych znaków.</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>number</td>
+                                <td><img src="../../Obrazy/CSS3/11/13.png" alt="i5"/>
+                                    <p>Służy do umieszczania samych wartości liczbowych</p>
+                                </td>
+                            </tr>
+                            
+                             <tr>
+                                <td>range</td>
+                                <td><img src="../../Obrazy/CSS3/11/14.png" alt="i6"/>
+                                    <p>Służy do wyboru wartości z zakresu. Posiada dodatkowe arybuty takie jak: <b>min="..."</b>, <b>max="..."</b> oraz <b>step="..."</b>.</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>color</td>
+                                <td><img src="../../Obrazy/CSS3/11/15.png" alt="i7"/>
+                                    <p>Służy do wyboru koloru z zakresu. Posiada dodatkowe arybuty takie jak: <b>min="..."</b>, <b>max="..."</b> oraz <b>step="..."</b>.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+            </div>
+            
+             <div id="right">
+                <h1>Spis lekcji</h1>
+                
+                <p>HTML5</p>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/HTML5/lekcja8.html">Lekcja 8</a></li>
+                </ul>
+                
+                <p>CSS3</p>
+                <ul>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Lekcja 1</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja2.html">Lekcja 2</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja3.html">Lekcja 3</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja4.html">Lekcja 4</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja5.html">Lekcja 5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja6.html">Lekcja 6</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja7.html">Lekcja 7</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja8.html">Lekcja 8</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja9.html">Lekcja 9</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja10.html">Lekcja 10</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja11.html">Lekcja 11</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja12.html">Lekcja 12</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <ul>
+                    <li><a href="../../Podstrony/HTML5/lekcja1.html">Kurs HTML5</a></li>
+                    <li><a href="../../Podstrony/CSS3/lekcja1.html">Kurs CSS3</a></li>
+                </ul>
+
+                <div id="cop">
+                    <p>&copy; Oknińska</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
