@@ -28,6 +28,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
+      background-color: black;
     }
   </style>
 </head>
@@ -36,59 +37,104 @@
   <div id="board"></div>
 
   <script>
-    //is Cell class
-    function Cell(htmlElement) {
+    //#######################implementing#classes###############################
+
+    //is Bubble class
+    function Bubble(htmlElement, position) {
       this.htmlElement = htmlElement;
+      this.position = position;
+
+      this.isSelected = false; //nie isSelected jeżeli isSurrounded
+      this.isSurrounded = false;
+    }
+
+    //is Cell class
+    function Cell(htmlElement, position) {
+      this.htmlElement = htmlElement;
+      this.position = position;
+
       this.bubble = null;
       this.isEmpty = true;
     }
 
-    //adds a div with css-class to specified destination
-    function addDiv(className, destination) {
-      var div = document.createElement("div");
-      div.classList.add(className);
-      document.getElementById(destination).appendChild(div);
-      return div;
-    };
-
     //is Board class
     function Board(boardRowCount) {
-      //creates cells object-array
-      this.cells = createObjectsArray(Cell, boardRowCount);
+      var board = document.getElementById("board");
+
+      //creates 2-dimensional "cells" object-array (row "boardRowCount" times)
+      //and objects's addHmtlElement(of "cell" className, of "board" appendChild_destination)
+      this.cells = createObjectsArray(Cell, boardRowCount, "cell", board);
     }
 
-    //is creator of objects-array (with its's own dives)
-    function createObjectsArray(objectName, count) {
+    //creates 2-dimensional objects-array (row "count" times)
+    //and objects's : addHmtlElement(className, appendChild_destination), "position" property
+    function createObjectsArray(objectName, count, className, appendChild_destination) {
       var array = [count];
       for (var i = 0; i < count; i++) {
         array[i] = [count];
         for (var j = 0; j < count; j++) {
-          array[i][j] = new objectName(addDiv("cell", "board"));
+          array[i][j] = new objectName(addHtmlElement(className, appendChild_destination), i + "" + j);
         }
       }
       return array;
     }
 
-    //is Bubble class
-    function Bubble(bubbleHtmlElement, position, color) {
-      this.htmlElement = bubbleHtmlElement;
-      this.position = position;
-      this.color = color;
+    //adds div-hmtlElement with css-class to specified destination
+    function addHtmlElement(className, destination) {
+      var div = document.createElement("div");
+      div.classList.add(className);
+      destination.appendChild(div);
+      return div;
+    };
 
-      this.isSelected = false;
-      this.isSurrounded = false;
+    //#####################bubbles#adding#functionality#########################
 
-      // function() {
-      //   var colors = ["#AA3939", "#882D60", "#AA6C39", "#277552", "#2C4770", "#AA6439", "#86AF34"];
-      //   return colors[Math.floor(Math.random() * colors.length)];
-      // }
+    //adds three bubbles to next round of random position & color
+    function addNextRoundBubbles(cellsArray, colors) {
+      for (var i = 0; i < 3; i++) {
+        //get random cell
+        var element = getRandomIndexFromArray(getEmptyCellsArray(cellsArray));
+
+        //set cell bubble and add it to bubbles array
+        element.bubble = new Bubble(addHtmlElement("bubble", element.htmlElement), element.position);
+        element.isEmpty = false;
+        // bubbles = []; 
+        // bubbles.push(element.bubble)
+        // console.log(bubbles)
+
+        //get random color and set it in bubble
+        var color = getRandomIndexFromArray(colors);
+        element.bubble.htmlElement.style.backgroundColor = color;
+      }
     }
 
-    //############################
+    //gets all empty cells form board
+    function getEmptyCellsArray(cellsArray) {
+      var emptyCells = [];
+      for (var i = 0; i < cellsArray.length; i++) {
+        for (var j = 0; j < cellsArray.length; j++)
+          if (cellsArray[i][j].isEmpty) {
+            emptyCells.push(cellsArray[i][j]);
+          }
+      }
+      return emptyCells;
+    }
+
+    //returns random index form given array
+    function getRandomIndexFromArray(array) {
+      return array[Math.floor(Math.random() * array.length)];
+    }
+
+    //###############################initialize#################################
 
     function init() {
+      var colors = ["#AA3939", "#882D60", "#AA6C39", "#277552", "#2C4770", "#AA6439", "#86AF34"];
       var board = new Board(9);
       console.log(board)
+
+      if (true) {
+        addNextRoundBubbles(board.cells, colors);
+      }
     }
 
     init();
