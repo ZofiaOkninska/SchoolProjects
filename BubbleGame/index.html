@@ -34,73 +34,63 @@
 
 <body>
   <div id="board"></div>
+
   <script>
-    //cell template
-    function Cell() {
-      this.isEmpty = true;
+    //is Cell class
+    function Cell(htmlElement) {
+      this.htmlElement = htmlElement;
       this.bubble = null;
-
-      //create cell-div method
-      createDiv = function() {
-        var divCell = document.createElement("div");
-        divCell.addEventListener("click", function() {
-          console.log("clicked");
-        });
-        divCell.classList.add("cell");
-        document.getElementById("board").appendChild(divCell);
-      };
-
-      createDiv();
+      this.isEmpty = true;
     }
 
-    //board creator
-    function Board(cellCount) {
-      function createObjectsArray(objectName, count) {
-        var array = [];
-        for (var i = 0; i < count; i++) {
-          array.push(new objectName());
-          //array[i].innerText = i; nie wpisuje się
+    //adds a div with css-class to specified destination
+    function addDiv(className, destination) {
+      var div = document.createElement("div");
+      div.classList.add(className);
+      document.getElementById(destination).appendChild(div);
+      return div;
+    };
+
+    //is Board class
+    function Board(boardRowCount) {
+      //creates cells object-array
+      this.cells = createObjectsArray(Cell, boardRowCount);
+    }
+
+    //is creator of objects-array (with its's own dives)
+    function createObjectsArray(objectName, count) {
+      var array = [count];
+      for (var i = 0; i < count; i++) {
+        array[i] = [count];
+        for (var j = 0; j < count; j++) {
+          array[i][j] = new objectName(addDiv("cell", "board"));
         }
-        return array;
       }
-
-      this.cells = createObjectsArray(Cell, cellCount);
+      return array;
     }
 
-    //bubble template
-    function Bubble() {
-      var colors = ["#AA3939", "#882D60", "#AA6C39", "#277552", "#2C4770", "#AA6439", "#86AF34"];
-      this.color = colors[Math.floor(Math.random() * colors.length)];
-      this.position = null;
+    //is Bubble class
+    function Bubble(bubbleHtmlElement, position, color) {
+      this.htmlElement = bubbleHtmlElement;
+      this.position = position;
+      this.color = color;
+
       this.isSelected = false;
+      this.isSurrounded = false;
 
-      //create bubble-div method
-      createDiv = function() {
-        var divBubble = document.createElement("div");
-        divBubble.addEventListener("click", function() {
-          console.log("clickedbubble!!!");
-        });
-        divBubble.classList.add("bubble");
-        document.getElementById("board").appendChild(divBubble);
-      };
-
-      // this.show = function(){
-      //   this.isVisible = true;
-      //   this.img.setAttribute("src", internalImgSource);
-      // }
-      //
-      // this.hide = function() {
-      //   this.isVisible = false;
-      //   this.img.setAttribute("src", defaultImgSource);
+      // function() {
+      //   var colors = ["#AA3939", "#882D60", "#AA6C39", "#277552", "#2C4770", "#AA6439", "#86AF34"];
+      //   return colors[Math.floor(Math.random() * colors.length)];
       // }
     }
 
     //############################
 
     function init() {
-      var board = new Board(81);
+      var board = new Board(9);
       console.log(board)
     }
+
     init();
   </script>
 </body>
