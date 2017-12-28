@@ -6,7 +6,7 @@
   <title>Bubbles</title>
   <style>
     * {
-      margin: 0 auto;
+      margin: auto;
     }
 
     #board {
@@ -25,10 +25,11 @@
     }
 
     .bubble {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background-color: black;
+      margin-top: 5px;
+      margin-left: 5px;
     }
   </style>
 </head>
@@ -40,40 +41,81 @@
     //#######################implementing#classes###############################
 
     //is Bubble class
-    function Bubble(htmlElement, position) {
+    function Bubble(htmlElement, parentCellPositionX, parentCellPositionY) {
       this.htmlElement = htmlElement;
-      this.position = position;
+      this.parentCellPositionX = parentCellPositionX;
+      this.parentCellPositionY = parentCellPositionY; //dunno if needed
 
       this.isSelected = false; //nie isSelected jeżeli isSurrounded
-      this.isSurrounded = false;
+
+      // this.htmlElement.onclick = function() {
+      //   if (!this.isSelected) {
+      //     this.isSelected = true;
+      //     sm();
+      //   } else if (this.isSelected) {
+      //     this.isSelected = false;
+      //     om();
+      //   }
+      // }
+
+      this.htmlElement.onclick = function() {
+        if (!isSurrounded) { //isSurrounded: if all of this neighbours !isEmpty => return true;
+          unselectAllCells();
+          this.isSelected = true;
+        }
+      }
     }
 
+    //#########bubble#onclick#functions##########
+
+    function unselectAllCells() {
+      //document.board.cells.forEach(this.isSelected = false);
+    }
+
+    function sm() {
+      alert("ooo");
+    }
+
+    function om() {
+      alert("mmm");
+    }
+
+    //######end#of#bubble#onclick#functions######
+
     //is Cell class
-    function Cell(htmlElement, position) {
+    function Cell(htmlElement, positionX, positionY) {
       this.htmlElement = htmlElement;
-      this.position = position;
+      this.positionX = positionX;
+      this.positionY = positionY;
 
       this.bubble = null;
       this.isEmpty = true;
+
+      //this.neighbours = function(this.positionX, this.positionY){
+      //
+      //}
     }
 
     //is Board class
-    function Board(boardRowCount) {
-      var board = document.getElementById("board");
+    function Board(rowCount, boardDiv) {
+      //creates 2-dimensional "cells" object-array (rows created "rowCount" times)
+      //and objects's hmtlElement(of "cell" className, of "board" appendChild_destination)
+      this.cells = createObjectsArray(Cell, rowCount, "cell", boardDiv);
 
-      //creates 2-dimensional "cells" object-array (row "boardRowCount" times)
-      //and objects's addHmtlElement(of "cell" className, of "board" appendChild_destination)
-      this.cells = createObjectsArray(Cell, boardRowCount, "cell", board);
+      //table of bubble-objects on board
+      this.bubbles = [];
+
+      this.graph = new Graph(this.cells);
     }
 
-    //creates 2-dimensional objects-array (row "count" times)
-    //and objects's : addHmtlElement(className, appendChild_destination), "position" property
+    //creates 2-dimensional objects-array (rows created "count" times)
+    //and objects's : hmtlElement(className, appendChild_destination), "positionX" property, "positionY" property
     function createObjectsArray(objectName, count, className, appendChild_destination) {
       var array = [count];
       for (var i = 0; i < count; i++) {
         array[i] = [count];
         for (var j = 0; j < count; j++) {
-          array[i][j] = new objectName(addHtmlElement(className, appendChild_destination), i + "" + j);
+          array[i][j] = new objectName(addHtmlElement(className, appendChild_destination), i, j);
         }
       }
       return array;
@@ -90,17 +132,16 @@
     //#####################bubbles#adding#functionality#########################
 
     //adds three bubbles to next round of random position & color
-    function addNextRoundBubbles(cellsArray, colors) {
+    function addNextRoundBubbles(cellsArray, bubblesArray, colors) {
       for (var i = 0; i < 3; i++) {
-        //get random cell
+        //get a random cell object
         var element = getRandomIndexFromArray(getEmptyCellsArray(cellsArray));
 
-        //set cell bubble and add it to bubbles array
-        element.bubble = new Bubble(addHtmlElement("bubble", element.htmlElement), element.position);
+        //set bubble of a cell
+        element.bubble = new Bubble(addHtmlElement("bubble", element.htmlElement), element.positionX, element.positionY);
         element.isEmpty = false;
-        // bubbles = []; 
-        // bubbles.push(element.bubble)
-        // console.log(bubbles)
+        //add cell's bubble to bubbles array
+        bubblesArray.push(element.bubble)
 
         //get random color and set it in bubble
         var color = getRandomIndexFromArray(colors);
@@ -125,16 +166,81 @@
       return array[Math.floor(Math.random() * array.length)];
     }
 
+    //#########################graph#functionality##############################
+    //sąsiad Nodea, to Node, którego współrzędne contentu to x-1,y itd
+    //{key: value, key2: value}
+
+    //is Graph class
+    function Graph(cellsArray) {
+      this.adjacencyList = createAdjacencyList(cellsArray);
+    }
+
+    //creates adjacencyList from Nodes
+    function createAdjacencyList(cellsArray) {
+      var adjacencyList = new Map();
+
+      //add nodes
+      for (var i = 0; i < cellsArray.length; i++) {
+        for (var j = 0; j < cellsArray.length; j++) {
+          adjacencyList.set(new Node(cellsArray[i][j].positionX, cellsArray[i][j].positionY), null);
+        }
+      }
+
+      //add nodes neighbours
+      for (var [key, value] of adjacencyList) {
+        adjacencyList.set(key, getNodeNeighbours(key));
+      }
+      return adjacencyList;
+    }
+
+    //is Node class
+    function Node(x, y) { //zapewne bez cell tylko same pos
+      //this.cell = cell;
+      this.x = x;
+      this.y = y;
+    }
+
+    //returns array of nodes being neighbours of given node
+    function getNodeNeighbours(key) {
+      var neighbours = [];
+
+      //top neighbour
+      if (key.x != 0) {
+        //key.x - 1
+        //searchForANode();
+        neighbours.push(); //node o key.x = x - 1
+      }
+
+      //bottom neighbour
+      if (key.x != 8) {
+        //key.x + 1
+      }
+
+      //left neighbour
+      if (key.y != 0) {
+        //key.y - 1
+      }
+
+      //right neighbour
+      if (key.y != 8) {
+        //key.y + 1
+      }
+
+      return neighbours;
+    }
+
     //###############################initialize#################################
 
     function init() {
-      var colors = ["#AA3939", "#882D60", "#AA6C39", "#277552", "#2C4770", "#AA6439", "#86AF34"];
-      var board = new Board(9);
-      console.log(board)
+      //               roxzow     fiol         brazy    ziel       nieb
+      var colors = ["#d27979", "#99336d", "#823E25", "#277552", "#2C4770", "#B84734", "#FFFF7A"];
+      var board = new Board(9, document.getElementById("board"));
 
+      //if (!beatedBubbles) {
       if (true) {
-        addNextRoundBubbles(board.cells, colors);
+        addNextRoundBubbles(board.cells, board.bubbles, colors);
       }
+      console.log(board)
     }
 
     init();
