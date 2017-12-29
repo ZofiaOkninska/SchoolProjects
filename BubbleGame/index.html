@@ -194,8 +194,7 @@
     }
 
     //is Node class
-    function Node(x, y) { //zapewne bez cell tylko same pos
-      //this.cell = cell;
+    function Node(x, y) {
       this.x = x;
       this.y = y;
     }
@@ -203,27 +202,17 @@
     //returns array of nodes being neighbours of given node
     function getNodeNeighbours(key) {
       var neighbours = [];
+      var directions = [
+        [0, 1],
+        [0, -1],
+        [1, 0],
+        [-1, 0]
+      ];
 
-      //top neighbour
-      if (key.x != 0) {
-        //key.x - 1
-        //searchForANode();
-        neighbours.push(); //node o key.x = x - 1
-      }
-
-      //bottom neighbour
-      if (key.x != 8) {
-        //key.x + 1
-      }
-
-      //left neighbour
-      if (key.y != 0) {
-        //key.y - 1
-      }
-
-      //right neighbour
-      if (key.y != 8) {
-        //key.y + 1
+      for (var i = 0; i < directions.length; i++) {
+        var nodeX = key.x + directions[i][0];
+        var nodeY = key.y + directions[i][1];
+        if ((nodeX >= 0 & nodeY >= 0) & (nodeX <= 8 & nodeY <= 8)) neighbours.push(new Node(nodeX, nodeY))
       }
 
       return neighbours;
